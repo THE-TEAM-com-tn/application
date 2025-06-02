@@ -131,6 +131,72 @@ This foundation has become our strength in spreading managerial knowledge with t
         </div>
       </section>
 
+
+
+
+{/* ===== Blog Start ===== */}
+<section className="ji gp uq">
+  {/* Section Title Start */}
+  <div>
+    <div className="animate_top bb ze rj ki xn vq">
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        Latest Blogs & News
+      </h2>
+        <p className="bb on/5 wo/5 hq">
+           <div className="flex justify-end items-center">
+  <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi">
+    All Blogs
+  </a>
+</div>
+
+        </p>
+    </div>
+  </div>
+  {/* Section Title End */}
+
+  <div className="bb ye ki xn vq jb jo">
+    <div className="wc qf pn xo zf iq">
+      {["01", "02", "03"].map((n, idx) => (
+        <div key={idx} className="animate_top sg vk rm xm">
+          <div className="c rc i z-1 pg">
+            <img className="w-full" src={`images/blog-${n}.png`} alt="Blog" />
+            <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+              <a href="./blog-single.html" className="vc ek rg lk gh sl ml il gi hi">
+                Read More
+              </a>
+            </div>
+          </div>
+          <div className="yh">
+            <div className="tc uf wf ag jq">
+              <div className="tc wf ag">
+                <img src="images/icon-man.svg" alt="User" />
+                <p>Musharof Chy</p>
+              </div>
+              <div className="tc wf ag">
+                <img src="images/icon-calender.svg" alt="Calender" />
+                <p>25 Dec, 2025</p>
+              </div>
+            </div>
+            <h4 className="ek tj ml il kk wm xl eq lb">
+              <a href="blog-single.html">
+                {[
+                  "Free advertising for your online business",
+                  "9 simple ways to improve your design skills",
+                  "Tips to quickly improve your coding speed."
+                ][idx]}
+              </a>
+            </h4>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+{/* ===== Blog End ===== */}
+
+
+
+
     {/* Team Section */}
 
 
@@ -355,55 +421,277 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
     </section>
       {/*<!-- ===== Services End ===== -->*/}
 
+{/* ===== Clients Start ===== */}
+<section className="pj vp mr">
+  {/* Section Title Start */}
+  <div>
+    <div className="animate_top bb ze rj ki xn vq">
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        Trusted by Global Brands
+      </h2>
+    </div>
+  </div>
+  {/* Section Title End */}
+
+  <div className="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
+    <div className="wc rf qn zf cp kq xf wf ">
+      {[4,5,6,7].map((n) => (
+        <a key={n} href="#" className="rc animate_top">
+          <img className="th wl ml il zl om" src={`images/client-0${n}.png`} alt="Clients" />
+        </a>
+      ))}
+      {[2,3].map((n) => (
+        <a key={n} href="#" className="rc animate_top">
+          <img className="th wl ml il zl om" src={`images/client-0${n}.jpg`} alt="Clients" />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+{/* ===== Clients End ===== */}
+
+{/* ===== Contact Start ===== */}
+<section id="support" className="i pg fh rm ji gp uq">
+  {/* Bg Shapes */}
+  <img src="images/shape-06.svg" alt="Shape" className="h aa y" />
+  <img src="images/shape-03.svg" alt="Shape" className="h ca u" />
+  <img src="images/shape-07.svg" alt="Shape" className="h w da ee" />
+  <img src="images/shape-12.svg" alt="Shape" className="h p s" />
+  <img src="images/shape-13.svg" alt="Shape" className="h r q" />
+
+  {/* Section Title Start */}
+  <div>
+    <div className="animate_top bb ze rj ki xn vq">
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        Let’s Stay Connected
+      </h2>
+      <p className="bb on/5 wo/5 hq">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
+      </p>
+    </div>
+  </div>
+  {/* Section Title End */}
+            
+  <div className="i va bb ye ki xn wq jb mo">
+    <div className="tc uf sn tf rn un zf xl:gap-10">
+      <div className="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg">
+        {/* Bg Shapes */}
+        <img src="images/shape-03.svg" alt="Shape" className="h la x wd" />
+        <img src="images/shape-06.svg" alt="Shape" className="h la ma ne kf" />
+            <br>
+        </br><br>
+        </br><br>
+        </br>
+        <div className="fb">
+          <h4 className="wj kk wm cc">Email Address</h4>
+          <p><a href="#">service.desk@theteam.com.tn</a></p>
+        </div>
+        <div className="fb">
+          <h4 className="wj kk wm cc">Office Location</h4>
+          <p>12 cités des médecins, par l'avenue Taher Sfar, Tunis 2092</p>
+        </div>
+        <div className="fb">
+          <h4 className="wj kk wm cc">Phone Number</h4>
+          <p><a href="#">+216 92 600 991</a></p>
+        </div>
+        <br>
+        </br>
+            <br>
+        </br><br>
+        </br>
+
+        <span className="rc nd rh tm lc fb"></span>
+
+        <div>
+          <h4 className="wj kk wm qb">Social Media</h4>
+          <ul className="tc wf fg">
+            <li>
+              <a href="https://www.facebook.com/people/The-Team-The-Tunisian-Establishment-for-Agile-Management/61564380223219/?_rdr"
+               className="c tc wf xf ie ld rg ml il tl">
+                <svg className="th lm ml il" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.83366 11.3752H9.12533L10.042 7.7085H6.83366V5.87516C6.83366 4.931 6.83366 4.04183 8.667 4.04183H10.042V0.96183C9.74316 0.922413 8.61475 0.833496 7.42308 0.833496C4.93433 0.833496 3.16699 2.35241 3.16699 5.14183V7.7085H0.416992V11.3752H3.16699V19.1668H6.83366V11.3752Z" fill="" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/the-team-tunisie/posts/?feedView=all" className="c tc wf xf ie ld rg ml il tl">
+                <svg className="th lm ml il" width="20" height="20" viewBox="0 0 24 24" fill="#259d79 " xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.98 8.98H14v2.09h.09c.7-1.33 2.42-2.09 3.97-2.09 4.25 0 5.04 2.8 5.04 6.43V24h-5v-7.33c0-1.75-.03-4-2.44-4-2.45 0-2.83 1.9-2.83 3.87V24h-5V8.98z"/>
+                </svg>
+              </a>
+            </li>
+            
+            {/* Remaining social media links */}
+          </ul>
+        </div>
+      </div>
+
+      <div className="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+        <form action="https://formbold.com/s/unique_form_id" method="POST">
+          <div className="tc sf yo ap zf ep qb">
+            <div className="vd to/2">
+              <label className="rc ac" htmlFor="fullname">Full name</label>
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                placeholder="Safiya Zbidi"
+                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              />
+            </div>
+
+            <div className="vd to/2">
+              <label className="rc ac" htmlFor="email">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@gmail.com"
+                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              />
+            </div>
+          </div>
+
+          <div className="tc sf yo ap zf ep qb">
+            <div className="vd to/2">
+              <label className="rc ac" htmlFor="phone">Phone number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+216 92 600 991"
+                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              />
+            </div>
+
+            <div className="vd to/2">
+              <label className="rc ac" htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Type your subject"
+                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              />
+            </div>
+          </div>
+
+          <div className="fb">
+            <label className="rc ac" htmlFor="message">Message</label>
+            <textarea
+              placeholder="Message"
+              rows="4"
+              name="message"
+              id="message"
+              className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"
+            ></textarea>
+          </div>
+
+          <div className="tc xf">
+                        <button className="vc text-green-500 lk gh ml il hi gi _l">Send Message</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{/* ===== Contact End ===== */}
+
 
 
       {/* Footer Section */}
-      <footer className="bg-gray-100 py-10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-1/4 mb-6">
-              <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div className="w-full md:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div>
-                <h4 className="font-semibold mb-2">Quick Links</h4>
-                <ul className="text-sm space-y-1">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Product</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Pricing</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Services</h4>
-                <ul className="text-sm space-y-1">
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">Graphics Design</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">UI/UX Design</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Support</h4>
-                <ul className="text-sm space-y-1">
-                  <li><a href="#">Company</a></li>
-                  <li><a href="#">Press Media</a></li>
-                  <li><a href="#">Our Blog</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-2">Newsletter</h4>
-                <form>
-                  <input type="text" placeholder="Email address" className="w-full px-3 py-2 border rounded" />
-                  <button className="mt-2 w-full bg-green-500 text-white py-2 rounded">Subscribe</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-10 text-sm text-gray-500">&copy; 2025 Base. All rights reserved</div>
+         <footer>
+            
+  <div className="bb ze ki xn 2xl:ud-px-0">
+    {/* Footer Top*/}
+    <div className="ji gp">
+      <div className="tc uf ap gg fp">
+        <div className="animate_top zd/2 to/4">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo" className="om" />
+            
+          </a>
+
+          <p className="lc fb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+          <ul className="tc wf cg">
+            <li>
+              <a href="#">
+                <svg className="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* SVG PATH*/}
+                </svg>
+              </a>
+            </li>
+            {/* More social icons*/}
+          </ul>
         </div>
-      </footer>
+<div className="absolute top-0 left-0 m-2 p-2 bg-white rounded shadow-md z-10">
+  <div className="text-sm font-medium text-gray-700">
+    <a
+      href="https://maps.google.com/maps?ll=36.840394,10.154915&z=16&t=m&hl=fr&gl=TN&mapclient=embed&cid=16889753832009446863"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 transition-colors"
+    >
+      📍 Agrandir le plan
+    </a>
+  </div>
+</div>
+
+
+       <div className="grid grid-cols-2 gap-8">
+  <div className="animate_top">
+    <h4 className="kk wm tj ec">Services</h4>
+    <ul>
+      <li><a href="#" className="sc xl vb">Training Offer</a></li>
+      <li><a href="#" className="sc xl vb">Consulting Services</a></li>
+      <li><a href="#" className="sc xl vb">Software Products</a></li>
+    </ul>
+  </div>
+
+  <div className="animate_top">
+    <h4 className="kk wm tj ec">Support</h4>
+    <ul>
+      <li><a href="#" className="sc xl vb">The Team</a></li>
+      <li><a href="#" className="sc xl vb">Training</a></li>
+      <li><a href="#" className="sc xl vb">Our Blog</a></li>
+      <li><a href="#" className="sc xl vb">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </div>
+    {/* Footer Top*/}
+
+    {/*Footer Bottom */}
+    <div className="bh ch pm tc uf sf yo wf xf ap cg fp bj">
+      <div className="animate_top">
+        <ul className="tc wf gg">
+          <li><a href="#" className="xl">English</a></li>
+          <li><a href="#" className="xl">Privacy Policy</a></li>
+          <li><a href="#" className="xl">Support</a></li>
+        </ul>
+      </div>
+
+      <div className="animate_top">
+        <p>&copy; 2025 Base. All rights reserved</p>
+      </div>
+    </div>
+    {/*Footer Bottom */}
+  </div>
+</footer>
+
+{/* ====== Back To Top Start ===== */}
+<button
+  className="xc wf xf ie ld vg sr gh tr g sa ta _a"
+  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+>
+  <svg className="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+  </svg>
+</button>
     </>
   );
 }
