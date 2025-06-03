@@ -1,4 +1,8 @@
-import React from "react";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Home() {
   return (
@@ -11,10 +15,11 @@ export default function Home() {
           <div className="vd wo/4 sd qo f ho oo wf yf">
             <nav>
               <ul className="tc _o sf yo cg ep">
-                <li><a href="index.html" className="xl text-yellow-400">Home</a></li>
+                <li></li><a href="index.html" className="xl text-gray-800 hover:text-green-600">Home</a>
+
                 <li><a href="index.html#features" className="xl text-yellow-400">Blog</a></li>
                 <li className="c i">
-                  <a href="#" className="xl tc wf yf bg text-yellow-400">
+                  <a href="#" className="xl tc wf yf bg text-green-500">
                     Trainings
                     <svg className="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                       <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
@@ -81,7 +86,7 @@ export default function Home() {
 
 
 
-      {/* Features Section */}
+      {/* Features Section 
       <section id="features">
         <div className="bb ze ki yn 2xl:ud-px-12.5">
           <div className="tc uf zo xf ap zf bp mq">
@@ -98,7 +103,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+*/}
       {/* About Section */}
       <section className="ji gp uq 2xl:ud-py-35 pg">
         <div className="bb ze ki xn wq">
@@ -130,10 +135,6 @@ This foundation has become our strength in spreading managerial knowledge with t
           </div>
         </div>
       </section>
-
-
-
-
 {/* ===== Blog Start ===== */}
 <section className="ji gp uq">
   {/* Section Title Start */}
@@ -143,7 +144,7 @@ This foundation has become our strength in spreading managerial knowledge with t
         Latest Blogs & News
       </h2>
         <p className="bb on/5 wo/5 hq">
-           <div className="flex justify-end items-center">
+           <div className="flex justify-end">
   <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi">
     All Blogs
   </a>
@@ -197,7 +198,309 @@ This foundation has become our strength in spreading managerial knowledge with t
 
 
 
-    {/* Team Section */}
+    
+     
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+{/*<!-- ===== Services Start ===== -->*/}
+      <section className="lj tp kr">
+        {/*<!-- Section Title Start -->*/}
+        <div>
+            <div className="relative z-10 animate_top bb ze rj ki xn vq">
+                <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+                We Offer The Best Quality Service for You
+                </h2>
+                <p className="bb on/5 wo/5 hq">
+                We are here to ensure your needs are met with precision and care.
+                </p>
+            </div>
+        </div>
+
+
+        
+        {/*<!-- Section Title End -->*/}
+
+        <div className="bb ze ki xn yq mb en">
+          <div className="wc qf pn xo ng">
+            {/*<!-- Service Item -->*/}
+            <div className="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-training.png" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b">Training Offer</h4>
+              <p>Training in project management (PMP®, Agile, SAFe®, PRINCE2®…)</p>
+
+
+                <div className="tc tf yo zf mb">
+                                <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l">
+                                   See our Trainings </a>
+                </div>
+
+            </div>
+
+            {/*<!-- Service Item -->*/}
+            <div className="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icon-puzzle.png" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b">Offre de conseil</h4>
+              <p>Organizational maturity assessments (PM, Agile, quality, etc.)</p>
+
+                <p>Support in establishing a Project Management Office (PMO)</p>
+
+                <p>Definition and deployment of strategic plans</p>
+
+                <p>Consulting in project governance and Agile/SAFe frameworks</p>
+
+                <p>Support in change management and digital transformation</p>
+            </div>
+
+            {/*<!-- Service Item -->*/}
+            <div className="animate_top sg oi pi zq ml il am cn _m">
+              <img src="images/icone-software.png" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b"> Software Products</h4>
+              <p>E-learning platforms</p> 
+
+<p>Personalized learning experiences</p>
+
+<p>Course and certification management</p>
+
+<p>Progress tracking and analytics</p>
+
+
+            </div>
+          </div>
+        </div>
+    </section>
+      {/*<!-- ===== Services End ===== -->*/}
+
+{/* ===== Clients Start ===== */}
+<section className="pj vp mr">
+  {/* Section Title Start */}
+  <div>
+    <div className="animate_top bb ze rj ki xn vq">
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        Trusted by Global Brands
+      </h2>
+    </div>
+  </div>
+  {/* Section Title End */}
+
+  <div className="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
+    <div className="wc rf qn zf cp kq xf wf ">
+      {[4,5,6,7].map((n) => (
+        <a key={n} href="#" className="rc animate_top">
+          <img className="th wl ml il zl om" src={`images/client-0${n}.png`} alt="Clients" />
+        </a>
+      ))}
+      {[2,3].map((n) => (
+        <a key={n} href="#" className="rc animate_top">
+          <img className="th wl ml il zl om" src={`images/client-0${n}.jpg`} alt="Clients" />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+{/* ===== Clients End ===== */}
+
+
+ {/* ===== Testimonials Start ===== */}
+      <section className="hj rp hr">
+        {/* Section Title Start */}
+        <div className="animate_top bb ze rj ki xn vq text-center">
+          <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+            Client’s Testimonials
+          </h2>
+        </div>
+        {/* Section Title End */}
+
+        <div className="bb ze ki xn ar">
+          <div className="animate_top jb cq">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              loop={true}
+              autoplay={{ delay: 4000 }}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              spaceBetween={30}
+              slidesPerView={1}
+              className="relative"
+            >
+              {/* Slide 1 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
+Thank you and best wishes going forward.                </p>
+                  <span className="rc ek xj kk wm zb block">Oussema Mellouli</span>
+                  <span className="rc">Olympic and World Champion in Swimming</span>
+                </div>
+              </SwiperSlide>
+              {/* Slide 2 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    Thank you for the warm welcome and the quality of the training content. The trainer, Ms. Safiya, is highly competent and attentive. She successfully shared her knowledge and experience while encouraging discussions among participants.
+I highly recommend the PMP training to my entire network on Facebook, LinkedIn, and beyond, at THE TEAM.
+Thank you also for the gifts 🙂
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Tarek KSONTINI</span>
+                  <span className="rc">Pre-Project & Costing Manager - SAFRAN</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 3 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    I highly recommend THE TEAM for management training. I sincerely thank Ms. Safiya, the trainer, for her excellent tools and support, which helped me obtain the PMP certificate.
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Rima Ben Amor</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 4 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    After months of consistent effort, balancing work, studies, and personal life, I am now PMP certified and fortunate to have scored "Above Target" in all domains. I obtained this certification from the Project Management Institute. Special thanks to THE TEAM, Safiya ZBIDI, Meriem SKIK, Monia Sahbani, Abdelmalek Sfaxi, and Imen Gharbi for their support. 
+~ Anyone who stops learning is old; anyone who keeps learning stays young ~
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Sahar JOMLI</span>
+                  <span className="rc">Project Manager, Business Process Reengineering - ENDA TAMWEEL</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 5 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    Another international achievement 😊😊 This time from the American institute PMI. "..." Many thanks to Ms. Safiya ZBIDI for sharing her know-how and life experience with us. Thanks to the entire team at The Team. Thanks to all my colleagues.
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Chawki Boumallouga</span>
+                  <span className="rc">Project Manager and Dynamics NAV Expert</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 6 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    I’m happy to share that I’ve obtained a new certification: Entry Certificate in Business Analysis™ from IIBA!
+Thanks to my coaches Abdelkader AYED CBAP®, PMP®, CISA®, COBIT5® and Ms. Safiya Ben Abderrahmen ZBIDI, MBA, PMP, ACP, RMP, PECB, PSM, CBAP.
+Thanks to The Team: Agile Management & Consulting
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Anis FERHANI</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 7 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    Excellent welcome, professionalism, and quality training. Special thanks to Ms. Meriem Skik for ensuring the smooth progress of the training.
+Bravo and keep up the good work.
+A wonderful experience that I sincerely look forward to repeating.
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Radhia Satouri</span>
+                </div>
+              </SwiperSlide>
+
+            {/* Slide 8 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+A truly effective experience. Thank you for the method, the atmosphere, and the group’s energy.
+Thanks to Ms. Safia, a very pleasant and lively person. She provided a content-rich training with many exercises, promoting group work in a respectful, supportive, and encouraging environment.
+I am very satisfied with both the content and the delivery.                  </p>
+                  <span className="rc ek xj kk wm zb block">Mohamed JAFFEL</span>
+                  <span className="rc">Methods Manager at FIGIAC Aero Tunisie
+Feedback on PRACTICAL MANAGEMENT Training</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 9 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+                    J’ai eu la chance d’assister à une session de formation sur le management de projet animée par Mr Ezzedine Abassi. J’ai découvert un professionnel de grande qualité. Il possède un talent avéré pour le management de projet. Bienveillant, motivant et empathique. Son énergie est contagieuse et sa passion pour les sujets présentés sont inspirantes et remarquables.
+
+
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Mouna Fridhi</span>
+                  <span className="rc">Experte Technique en Transformation Digitale - GIZ</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 10 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+I have just celebrated earning my PMP certification with you, and I am deeply grateful for your help and efforts in the training. I wish to express my sincere appreciation and hope to continue advancing in this field to enhance my performance.
+
+
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
+                </div>
+              </SwiperSlide>
+
+{/* Slide 11 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+I highly recommend attending the training sessions organized by The Team. Personally, I am very satisfied with the trainings I attended, such as PMP and PSM & PSPO. Many thanks to Ms. Safiya Zbidi and the entire team at THE TEAM.
+
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 1 */}
+              <SwiperSlide>
+                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
+                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
+                  <p className="ek ik xj _p kc fb mb-4">
+I highly recommend attending the training sessions organized by The Team. Personally, I am very satisfied with the trainings I attended, such as PMP and PSM & PSPO. Many thanks to Ms. Safiya Zbidi and the entire team at THE TEAM.
+
+                  </p>
+                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
+                </div>
+              </SwiperSlide>
+
+             
+            </Swiper>
+          </div>
+        </div>
+      </section>
+      {/* ===== Testimonials End ===== */}
+
+
+{/* Team Section */}
 
 
       <section className="i pg ji gp uq">
@@ -351,107 +654,8 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
           </div>
         </div>
       </section>
-     
-
-{/*<!-- ===== Services Start ===== -->*/}
-      <section className="lj tp kr">
-        {/*<!-- Section Title Start -->*/}
-        <div>
-            <div className="relative z-10 animate_top bb ze rj ki xn vq">
-                <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-                We Offer The Best Quality Service for You
-                </h2>
-                <p className="bb on/5 wo/5 hq">
-                We are here to ensure your needs are met with precision and care.
-                </p>
-            </div>
-        </div>
-
-
-        
-        {/*<!-- Section Title End -->*/}
-
-        <div className="bb ze ki xn yq mb en">
-          <div className="wc qf pn xo ng">
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-04.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Training Offer</h4>
-              <p>Training in project management (PMP®, Agile, SAFe®, PRINCE2®…)</p>
-
-
-                <div className="tc tf yo zf mb">
-                                <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l">
-                                   See our Trainings </a>
-                </div>
-
-            </div>
-
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-05.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Offre de conseil</h4>
-              <p>Organizational maturity assessments (PM, Agile, quality, etc.)</p>
-
-                <p>Support in establishing a Project Management Office (PMO)</p>
-
-                <p>Definition and deployment of strategic plans</p>
-
-                <p>Consulting in project governance and Agile/SAFe frameworks</p>
-
-                <p>Support in change management and digital transformation</p>
-            </div>
-
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-06.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b"> Software Products</h4>
-              <p>E-learning platforms</p> 
-
-<p>Personalized learning experiences</p>
-
-<p>Course and certification management</p>
-
-<p>Progress tracking and analytics</p>
-
-
-            </div>
-          </div>
-        </div>
-    </section>
-      {/*<!-- ===== Services End ===== -->*/}
-
-{/* ===== Clients Start ===== */}
-<section className="pj vp mr">
-  {/* Section Title Start */}
-  <div>
-    <div className="animate_top bb ze rj ki xn vq">
-      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-        Trusted by Global Brands
-      </h2>
-    </div>
-  </div>
-  {/* Section Title End */}
-
-  <div className="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
-    <div className="wc rf qn zf cp kq xf wf ">
-      {[4,5,6,7].map((n) => (
-        <a key={n} href="#" className="rc animate_top">
-          <img className="th wl ml il zl om" src={`images/client-0${n}.png`} alt="Clients" />
-        </a>
-      ))}
-      {[2,3].map((n) => (
-        <a key={n} href="#" className="rc animate_top">
-          <img className="th wl ml il zl om" src={`images/client-0${n}.jpg`} alt="Clients" />
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
-{/* ===== Clients End ===== */}
-
 {/* ===== Contact Start ===== */}
-<section id="support" className="i pg fh rm ji gp uq">
+<section id="support" className="i pg fhh rm ji gp uq">
   {/* Bg Shapes */}
   <img src="images/shape-06.svg" alt="Shape" className="h aa y" />
   <img src="images/shape-03.svg" alt="Shape" className="h ca u" />
