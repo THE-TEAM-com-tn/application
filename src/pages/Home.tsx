@@ -328,7 +328,7 @@ This foundation has become our strength in spreading managerial knowledge with t
               {/* Slide 1 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/oussema-mellouli.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
 I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
@@ -340,7 +340,7 @@ Thank you and best wishes going forward.                </p>
               {/* Slide 2 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/tarekksontini.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     Thank you for the warm welcome and the quality of the training content. The trainer, Ms. Safiya, is highly competent and attentive. She successfully shared her knowledge and experience while encouraging discussions among participants.
@@ -355,7 +355,7 @@ Thank you also for the gifts 🙂
               {/* Slide 3 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/rimabenamor.jpg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/rimabenamor.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     I highly recommend THE TEAM for management training. I sincerely thank Ms. Safiya, the trainer, for her excellent tools and support, which helped me obtain the PMP certificate.
@@ -367,7 +367,7 @@ Thank you also for the gifts 🙂
               {/* Slide 4 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/saharjomli.jpg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/saharjomli.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     After months of consistent effort, balancing work, studies, and personal life, I am now PMP certified and fortunate to have scored "Above Target" in all domains. I obtained this certification from the Project Management Institute. Special thanks to THE TEAM, Safiya ZBIDI, Meriem SKIK, Monia Sahbani, Abdelmalek Sfaxi, and Imen Gharbi for their support. 
@@ -381,7 +381,7 @@ Thank you also for the gifts 🙂
               {/* Slide 5 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/chawkiboumallouga.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/chawkiboumallouga.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     Another international achievement 😊😊 This time from the American institute PMI. "..." Many thanks to Ms. Safiya ZBIDI for sharing her know-how and life experience with us. Thanks to the entire team at The Team. Thanks to all my colleagues.
@@ -394,7 +394,7 @@ Thank you also for the gifts 🙂
               {/* Slide 6 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/anisferhani.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/anisferhani.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     I’m happy to share that I’ve obtained a new certification: Entry Certificate in Business Analysis™ from IIBA!
@@ -408,7 +408,7 @@ Thanks to The Team: Agile Management & Consulting
               {/* Slide 7 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/radhiasatouri.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/sansphoto.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     Excellent welcome, professionalism, and quality training. Special thanks to Ms. Meriem Skik for ensuring the smooth progress of the training.
@@ -422,7 +422,7 @@ A wonderful experience that I sincerely look forward to repeating.
             {/* Slide 8 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/mohamedjaffel.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/mohamedjaffel.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
 A truly effective experience. Thank you for the method, the atmosphere, and the group’s energy.
@@ -437,7 +437,7 @@ Feedback on PRACTICAL MANAGEMENT Training</span>
               {/* Slide 9 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/mounafridhi.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/mounafridhi.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     J’ai eu la chance d’assister à une session de formation sur le management de projet animée par Mr Ezzedine Abassi. J’ai découvert un professionnel de grande qualité. Il possède un talent avéré pour le management de projet. Bienveillant, motivant et empathique. Son énergie est contagieuse et sa passion pour les sujets présentés sont inspirantes et remarquables.
@@ -452,37 +452,11 @@ Feedback on PRACTICAL MANAGEMENT Training</span>
               {/* Slide 10 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/sansphotohomme.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
 I have just celebrated earning my PMP certification with you, and I am deeply grateful for your help and efforts in the training. I wish to express my sincere appreciation and hope to continue advancing in this field to enhance my performance.
 
-
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
-                </div>
-              </SwiperSlide>
-
-{/* Slide 11 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-I highly recommend attending the training sessions organized by The Team. Personally, I am very satisfied with the trainings I attended, such as PMP and PSM & PSPO. Many thanks to Ms. Safiya Zbidi and the entire team at THE TEAM.
-
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 1 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-I highly recommend attending the training sessions organized by The Team. Personally, I am very satisfied with the trainings I attended, such as PMP and PSM & PSPO. Many thanks to Ms. Safiya Zbidi and the entire team at THE TEAM.
 
                   </p>
                   <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
