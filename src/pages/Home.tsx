@@ -3,57 +3,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 
 export default function Home() {
   return (
     <>
-    {/* Header */}
-      <header className="g s r vd ya cj">
-        <div className="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
-          
+      <Header/>
 
-          <div className="vd wo/4 sd qo f ho oo wf yf">
-            <nav>
-              <ul className="tc _o sf yo cg ep">
-                <li></li><a href="index.html" className="xl text-gray-800 hover:text-green-600">Home</a>
-
-                <li><a href="index.html#features" className="xl text-yellow-400">Blog</a></li>
-                <li className="c i">
-                  <a href="#" className="xl tc wf yf bg text-green-500">
-                    Trainings
-                    <svg className="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                    </svg>
-                  </a>
-                  <ul className="a tc">
-                    <li><a href="blog-grid.html" className="xl">Blog Grid</a></li>
-                    <li><a href="blog-single.html" className="xl">Blog Single</a></li>
-                    <li><a href="signin.html" className="xl">Sign In</a></li>
-                    <li><a href="signup.html" className="xl">Sign Up</a></li>
-                    <li><a href="404.html" className="xl">404</a></li>
-                  </ul>
-                </li>
-                <li><a href="index.html#support" className="xl text-yellow-400">Contact us</a></li>
-              </ul>
-            </nav>
-
-            <div className="tc wf ig pb no">
-              <div className="pc h io pa ra">
-                <label className="rc ab i">
-                  <input type="checkbox" className="pf vd yc uk h r za ab" />
-                  <svg className="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.0908 18.6363...Z" fill="" />
-                  </svg>
-                  <img className="xc nm" src="images/icon-moon.svg" alt="Moon" />
-                </label>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <section className="gj do ir hj sp jr i pg">
+      
+       <section className="gj do ir hj sp jr i pg">
         {/* Hero Images */}
         <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
           <img alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" src="/images/shape-01.svg" />
@@ -274,6 +234,38 @@ This foundation has become our strength in spreading managerial knowledge with t
     </section>
       {/*<!-- ===== Services End ===== -->*/}
 
+<section className="gj do ir hj sp jr i pg">
+        {/* Hero Images */}
+        <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
+          
+<img
+  alt="Woman"
+  className="absolute w-6/10 left-[57%] top-[46%] -translate-x-1/2 -translate-y-1/2 ua"
+  src="\images\womennn.png"
+/>
+
+        </div>
+
+        {/* Hero Content */}
+        <div className="bb ze ki xn 2xl:ud-px-0">
+          <div className="tc _o">
+            <div className="animate_left jn/2">
+  <h1 className="fk vj zp or kk wm wb">
+    Do you have a <br></br>
+    specific need that<br></br>requires tailored support?
+  </h1>
+
+              <div className="tc xf">
+                    <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l">
+                                   Submit your Request </a>
+          </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 {/* ===== Clients Start ===== */}
 <section className="pj vp mr">
   {/* Section Title Start */}
@@ -316,6 +308,7 @@ This foundation has become our strength in spreading managerial knowledge with t
 
         <div className="bb ze ki xn ar">
           <div className="animate_top jb cq">
+            
             <Swiper
               modules={[Navigation, Autoplay]}
               loop={true}
@@ -358,7 +351,7 @@ Thank you also for the gifts 🙂
               {/* Slide 3 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/rimabenamor.jpg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     I highly recommend THE TEAM for management training. I sincerely thank Ms. Safiya, the trainer, for her excellent tools and support, which helped me obtain the PMP certificate.
@@ -370,7 +363,7 @@ Thank you also for the gifts 🙂
               {/* Slide 4 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/saharjomli.jpg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     After months of consistent effort, balancing work, studies, and personal life, I am now PMP certified and fortunate to have scored "Above Target" in all domains. I obtained this certification from the Project Management Institute. Special thanks to THE TEAM, Safiya ZBIDI, Meriem SKIK, Monia Sahbani, Abdelmalek Sfaxi, and Imen Gharbi for their support. 
@@ -384,7 +377,7 @@ Thank you also for the gifts 🙂
               {/* Slide 5 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/chawkiboumallouga.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     Another international achievement 😊😊 This time from the American institute PMI. "..." Many thanks to Ms. Safiya ZBIDI for sharing her know-how and life experience with us. Thanks to the entire team at The Team. Thanks to all my colleagues.
@@ -397,7 +390,7 @@ Thank you also for the gifts 🙂
               {/* Slide 6 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/anisferhani.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     I’m happy to share that I’ve obtained a new certification: Entry Certificate in Business Analysis™ from IIBA!
@@ -411,7 +404,7 @@ Thanks to The Team: Agile Management & Consulting
               {/* Slide 7 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/radhiasatouri.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     Excellent welcome, professionalism, and quality training. Special thanks to Ms. Meriem Skik for ensuring the smooth progress of the training.
@@ -425,7 +418,7 @@ A wonderful experience that I sincerely look forward to repeating.
             {/* Slide 8 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/mohamedjaffel.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
 A truly effective experience. Thank you for the method, the atmosphere, and the group’s energy.
@@ -440,7 +433,7 @@ Feedback on PRACTICAL MANAGEMENT Training</span>
               {/* Slide 9 */}
               <SwiperSlide>
                 <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/testimonial.png" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
+                  <img src="/images/mounafridhi.jpeg" alt="User" className="w-20 h-20 mx-auto rounded-full mb-4" />
                   <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
                   <p className="ek ik xj _p kc fb mb-4">
                     J’ai eu la chance d’assister à une session de formation sur le management de projet animée par Mr Ezzedine Abassi. J’ai découvert un professionnel de grande qualité. Il possède un talent avéré pour le management de projet. Bienveillant, motivant et empathique. Son énergie est contagieuse et sa passion pour les sujets présentés sont inspirantes et remarquables.
@@ -802,91 +795,9 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
 </section>
 {/* ===== Contact End ===== */}
 
+<Footer />
 
-
-      {/* Footer Section */}
-         <footer>
-            
-  <div className="bb ze ki xn 2xl:ud-px-0">
-    {/* Footer Top*/}
-    <div className="ji gp">
-      <div className="tc uf ap gg fp">
-        <div className="animate_top zd/2 to/4">
-          <a href="index.html">
-            <img src="images/logo.png" alt="Logo" className="om" />
-            
-          </a>
-
-          <p className="lc fb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-          <ul className="tc wf cg">
-            <li>
-              <a href="#">
-                <svg className="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* SVG PATH*/}
-                </svg>
-              </a>
-            </li>
-            {/* More social icons*/}
-          </ul>
-        </div>
-<div className="absolute top-0 left-0 m-2 p-2 bg-white rounded shadow-md z-10">
-  <div className="text-sm font-medium text-gray-700">
-    <a
-      href="https://maps.google.com/maps?ll=36.840394,10.154915&z=16&t=m&hl=fr&gl=TN&mapclient=embed&cid=16889753832009446863"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 transition-colors"
-    >
-      📍 Agrandir le plan
-    </a>
-  </div>
-</div>
-
-
-       <div className="grid grid-cols-2 gap-8">
-  <div className="animate_top">
-    <h4 className="kk wm tj ec">Services</h4>
-    <ul>
-      <li><a href="#" className="sc xl vb">Training Offer</a></li>
-      <li><a href="#" className="sc xl vb">Consulting Services</a></li>
-      <li><a href="#" className="sc xl vb">Software Products</a></li>
-    </ul>
-  </div>
-
-  <div className="animate_top">
-    <h4 className="kk wm tj ec">Support</h4>
-    <ul>
-      <li><a href="#" className="sc xl vb">The Team</a></li>
-      <li><a href="#" className="sc xl vb">Training</a></li>
-      <li><a href="#" className="sc xl vb">Our Blog</a></li>
-      <li><a href="#" className="sc xl vb">Contact Us</a></li>
-    </ul>
-  </div>
-</div>
-
-      </div>
-    </div>
-    {/* Footer Top*/}
-
-    {/*Footer Bottom */}
-    <div className="bh ch pm tc uf sf yo wf xf ap cg fp bj">
-      <div className="animate_top">
-        <ul className="tc wf gg">
-          <li><a href="#" className="xl">English</a></li>
-          <li><a href="#" className="xl">Privacy Policy</a></li>
-          <li><a href="#" className="xl">Support</a></li>
-        </ul>
-      </div>
-
-      <div className="animate_top">
-        <p>&copy; 2025 Base. All rights reserved</p>
-      </div>
-    </div>
-    {/*Footer Bottom */}
-  </div>
-</footer>
-
+      
 {/* ====== Back To Top Start ===== */}
 <button
   className="xc wf xf ie ld vg sr gh tr g sa ta _a"

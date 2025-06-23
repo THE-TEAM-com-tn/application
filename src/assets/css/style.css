@@ -613,6 +613,8 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .g{
   position: fixed;
+  background-color: #ffffff;
+  height:0cm
 }
 .h{
   position: absolute;
@@ -1020,7 +1022,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
   width: 2.25rem;
 }
 .zd\/2{
-  width: 50%;
+  width: 100%;
 }
 ._d{
   width: -moz-fit-content;
@@ -1106,6 +1108,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .ze{
   max-width: 86.875rem;
+  
+}
+.zee{
+  max-width: 100%;
+background-color: #fff;
 }
 ._e{
   max-width: -moz-fit-content;
@@ -1539,7 +1546,7 @@ background-color: #ffffff;
   padding-top: 8.75rem;
 }
 .hj{
-  padding-bottom: 5rem;
+  padding-bottom: 0rem;
 }
 .ij{
   padding-top: 1.875rem;
@@ -2313,7 +2320,7 @@ background-color: #ffffff;
   }
 
   .sp{
-    padding-bottom: 7.5rem;
+    padding-bottom: 0rem;
   }
 
   .tp{
@@ -2510,7 +2517,7 @@ background-color: #ffffff;
   }
 
   .jr{
-    padding-bottom: 14.75rem;
+    padding-bottom: 9rem;
   }
 
   .kr{

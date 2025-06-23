@@ -4,16 +4,24 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import './assets/css/style.css'; // style de la template
 import './index.css'; // Tailwind
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from "./pages/Home";
+import Blog from './pages/Blog';
+import Page from './pages/Page';
+import FormPage from './pages/FormPage';
+import NotFound from './pages/NotFound';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-   
-      <Home />
-   
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/pages/:id" element={<Page />} />
+        <Route path="/forms" element={<FormPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
