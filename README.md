@@ -52,3 +52,12 @@ export default tseslint.config({
   },
 })
 ```
+
+
+
+---
+
+
+https://base-tailwind.preview.uideck.com
+
+
