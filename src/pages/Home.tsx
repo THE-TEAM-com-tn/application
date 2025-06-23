@@ -12,36 +12,40 @@ export default function Home() {
     <>
       <Header/>
 
-      
        <section className="gj do ir hj sp jr i pg">
-        {/* Hero Images */}
-        <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
-          <img alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" src="/images/shape-01.svg" />
-          <img alt="shape" className="h q r" src="/images/shape-04-green.svg" />
-<img
-  alt="Woman"
-  className="absolute w-6/10 left-[57%] top-[46%] -translate-x-1/2 -translate-y-1/2 ua"
+  {/* Hero Images */}
+  <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
+    <img alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" src="/images/shape-01.svg" />
+    <img alt="shape" className="h q r" src="/images/shape-04-green.svg" />
+
+   <img
   src="/images/womenn.png"
+  alt="Woman"
+className="absolute inset-0 mx-auto my-auto w-[50%] max-w-[400px] min-w-[200px] h-auto object-contain z-10 translate-x-2"
 />
 
-        </div>
 
-        {/* Hero Content */}
-        <div className="bb ze ki xn 2xl:ud-px-0">
-          <div className="tc _o">
-            <div className="animate_left jn/2">
-  <h1 className="fk vj zp or kk wm wb">
-    <img alt="Logo" className="h-6 w-auto ml-0" src="/images/logo.png" />
-  </h1>
 
-              <p className="fq">
-                The Team is a consulting agency specializing in digital transformation, marketing strategy, and technological support. For several years, we have been helping businesses grow by providing innovative, tailored, high-impact solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    
+  </div>
+
+  {/* Hero Content */}
+  <div className="bb ze ki xn 2xl:ud-px-0">
+    <div className="tc _o">
+      <div className="animate_left jn/2">
+        <h1 className="fk vj zp or kk wm wb">
+          <img alt="Logo" className="h-6 w-auto ml-0" src="/images/logo.png" />
+        </h1>
+
+        <p className="fq">
+          The Team is a consulting agency specializing in digital transformation, marketing strategy,
+          and technological support. For several years, we have been helping businesses grow by
+          providing innovative, tailored, high-impact solutions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   
 
 
