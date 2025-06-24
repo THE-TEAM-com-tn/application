@@ -70,11 +70,17 @@ export default function Footer() {
             <h4 className="kk wm tj ec">Contact</h4>
             <ul>
               <li>
-                <span className="sc xl vb">Address:</span>
-                <span className="ml-2">{footerData?.footer_address || 'Loading...'}</span>
+                {/*<span className="sc xl vb">Address:</span>*/}
+                 <a
+                     href={footerData?.footer_gmaps_url || ''}
+                     className="ml-2 sc xl vb"
+                 >
+                  <span className="ml-2">{footerData?.footer_address || 'Loading...'}</span>
+
+                </a>
               </li>
               <li>
-               {/* <span className="sc xl vb">Phone:</span>*/}
+                {/* <span className="sc xl vb">Phone:</span>*/}
                 <span className="sc xl vb">{footerData?.footer_phone_number || 'Loading...'}</span>
               </li>
               <li>
