@@ -14,9 +14,22 @@ export default function Blog() {
   const [blogData, setBlogData] = useState<BlogItem[]>([]);
 
   useEffect(() => {
-    fetch("https://app.the-team.tn/api/blog")
+    fetch("https://app.the-team.tn/api/blog-posts")
       .then((res) => res.json())
-      .then((data) => setBlogData(data.data)) // <-- ajuste selon la structure réelle
+      .then((data) => {
+        const blogs = data.data.map((item: any) => ({
+          id: item.id,
+          title: item.title,
+          image: `https://app.the-team.tn/storage/${item.image}`,
+          author: item.author?.name || "Unknown",
+          date: new Date(item.created_at).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
+        }));
+        setBlogData(blogs);
+      })
       .catch((err) => console.error("Erreur de chargement :", err));
   }, []);
 
@@ -60,7 +73,7 @@ export default function Blog() {
             ))
           )}
 
-          {/* Pagination (statique ici, à adapter pour pagination dynamique si nécessaire) */}
+          {/* Pagination (statique ici, dynamique possible ensuite) */}
           <div className="mb lo bq i ua">
             <nav>
               <ul className="tc wf xf bg">
