@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 type BlogItem = {
   id: number;
   image: string;
+  slug: string;
   title: string;
   author: string;
   date: string;
@@ -21,6 +22,7 @@ export default function Blog() {
           id: item.id,
           title: item.title,
           image: `https://app.the-team.tn/storage/${item.image}`,
+          slug: item.slug,
           author: item.author?.name || "Unknown",
           date: new Date(item.created_at).toLocaleDateString("en-US", {
             year: "numeric",
@@ -41,13 +43,13 @@ export default function Blog() {
           {blogData.length === 0 ? (
             <p className="text-center text-gray-500">Loading blogs...</p>
           ) : (
-            blogData.map(({ id, image, title, author, date }) => (
+            blogData.map(({ id, image, title, author, date, slug }) => (
               <div key={id} className="wc qf pn xo zf iq">
                 <div className="animate_top sg vk rm xm">
                   <div className="c rc i z-1 pg">
                     <img className="w-full" src={image} alt={title} />
                     <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                      <a href={`/blog/${id}`} className="vc ek rg lk gh sl ml il gi hi">
+                      <a href={`/blogs/${slug}`} className="vc ek rg lk gh sl ml il gi hi">
                         Read More
                       </a>
                     </div>
