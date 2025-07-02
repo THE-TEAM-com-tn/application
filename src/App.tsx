@@ -13,6 +13,7 @@ import Training from './pages/Training';
 import TrainingSingle from './pages/TrainingSingle';
 import Page from './pages/Page';
 import Reclamation from './pages/Reclamation';
+import Devis from './pages/Devis';
 import FormPage from './pages/FormPage';
 import NotFound from './pages/NotFound';
 
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/pages/:id" element={<Page />} />
         <Route path="/forms" element={<FormPage />} />
         <Route path="/reclamation" element={<Reclamation />} />
+        <Route path="/devis" element={<Devis />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

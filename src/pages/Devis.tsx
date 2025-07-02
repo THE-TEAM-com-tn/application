@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-export default function Reclamation() {
+export default function Devis() {
   const [formData, setFormData] = useState({
     fullname: '',
     client_email: '',
@@ -71,7 +71,9 @@ return (
   <div>
           <div className="animate_top bb ze rj ki xn vq">
             <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-              Please let us know if you have any complaints or concerns.
+              Do you have a
+specific need that
+requires tailored support?
             </h2>
           </div>
         </div>
@@ -111,7 +113,7 @@ return (
 
                 <div className="tc sf yo ap zf ep qb">
                   <div className="vd to/2">
-                   <label className="rc ac" htmlFor="type">Type</label>
+                   <label className="rc ac" htmlFor="type">Training</label>
                 <select
                     name="type"
                     id="type"
@@ -119,11 +121,22 @@ return (
                     onChange={handleChange}
                     className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"
                 >
-                    <option value="">Select a type</option>
-                    <option value="complaint">complaint</option>
-                    <option value="suggestion">billing</option>
-                    <option value="suggestion">technical</option>
-                    <option value="other">Other</option>
+                    <option value="">Select the training</option>
+                    
+                    <option value="suggestion">PMI-ACP</option>
+                    <option value="suggestion">PMI-PMP</option>
+                    <option value="suggestion">IIBA</option>
+                    <option value="suggestion">Business Analysis</option>
+                    <option value="suggestion">PSM</option>
+                    <option value="suggestion">PSPO</option>
+                    <option value="suggestion">Devops Founation</option>
+                    <option value="suggestion">Devops tools</option>
+                    <option value="suggestion">Devops CKA</option>
+                    <option value="suggestion">MS project</option>
+                    <option value="suggestion">BPM</option>
+                    <option value="complaint">Safe Agiliste</option>
+                    <option value="suggestion">Power BI</option>
+                    <option value="suggestion">ISTQB</option>
                 </select>
                   </div>
 

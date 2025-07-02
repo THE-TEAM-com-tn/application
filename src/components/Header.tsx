@@ -104,9 +104,10 @@ export default function AppHeader() {
 
                 {dropdown && (
                   <ul className="a tc">
-                    <li><a href="./reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Reclamation</a></li>
-                    <li><a href="blog-single.html" className={`xl ${page === 'blog-single' ? 'mk' : ''}`}>Tailored need</a></li>
-                    <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Contact Us</a></li>
+                    
+                    <li><a href="./devis" className={`xl ${page === 'devis' ? 'mk' : ''}`}>Tailored need</a></li>
+                    <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Review</a></li>
+                    <li><a href="./reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Complaint</a></li>
                   </ul>
                 )}
               </li>
