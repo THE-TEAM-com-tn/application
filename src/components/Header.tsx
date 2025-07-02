@@ -75,7 +75,7 @@ export default function AppHeader() {
 
                 {dropdown && (
                   <ul className="a tc">
-                    <li><a href="blog-grid.html" className={`xl ${page === 'blog-grid' ? 'mk' : ''}`}>Agility</a>
+                    <li><a href="/trainings" className={`xl ${page === 'training' ? 'mk' : ''}`}>Agility</a>
                         <li><a href="blog-grid.html" className={`xl ${page === 'blog-grid' ? 'mk' : ''}`}>Business Analysis</a></li>
                         <li><a href="blog-single.html" className={`xl ${page === 'blog-single' ? 'mk' : ''}`}>Lean Management</a></li>
                         <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Project Management</a></li>
@@ -104,7 +104,7 @@ export default function AppHeader() {
 
                 {dropdown && (
                   <ul className="a tc">
-                    <li><a href="blog-grid.html" className={`xl ${page === 'blog-grid' ? 'mk' : ''}`}>Reclamation</a></li>
+                    <li><a href="./reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Reclamation</a></li>
                     <li><a href="blog-single.html" className={`xl ${page === 'blog-single' ? 'mk' : ''}`}>Tailored need</a></li>
                     <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Contact Us</a></li>
                   </ul>

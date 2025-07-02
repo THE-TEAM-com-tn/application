@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-type BlogItem = {
+type TrainingItem = {
   id: number;
   image: string;
   slug: string;
@@ -11,14 +11,14 @@ type BlogItem = {
   date: string;
 };
 
-export default function Blog() {
-  const [blogData, setBlogData] = useState<BlogItem[]>([]);
+export default function Training() {
+  const [trainingData, setTrainingData] = useState<TrainingItem[]>([]);
 
   useEffect(() => {
-    fetch("https://app.the-team.tn/api/blog-posts")
+    fetch("https://app.the-team.tn/api/trainings")
       .then((res) => res.json())
       .then((data) => {
-        const blogs = data.data.map((item: any) => ({
+        const trainings = data.data.map((item: any) => ({
           id: item.id,
           title: item.title,
           image: `https://app.the-team.tn/storage/${item.image}`,
@@ -30,7 +30,7 @@ export default function Blog() {
             day: "numeric",
           }),
         }));
-        setBlogData(blogs);
+        setTrainingData(trainings);
       })
       .catch((err) => console.error("Erreur de chargement :", err));
   }, []);
@@ -40,17 +40,17 @@ export default function Blog() {
       <Header />
       <section className="ji gp uq">
         <div className="bb ye ki xn vq jb jo">
-          {blogData.length === 0 ? (
-            <p className="text-center text-gray-500">Loading blogs...</p>
+          {trainingData.length === 0 ? (
+            <p className="text-center text-gray-500">Loading trainings...</p>
           ) : (
-            blogData.map(({ id, image, title, author, date, slug }) => (
+            trainingData.map(({ id, image, title, author, date, slug }) => (
               <div key={id} className="wc qf pn xo zf iq">
                 <div className="animate_top sg vk rm xm">
                   <div className="c rc i z-1 pg">
                     <img className="w-full" src={image} alt={title} />
                     <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                      <a href={`/blogs/${slug}`} className="vc ek rg lk gh sl ml il gi hi">
-                        Read More
+                      <a href={`/trainings/${slug}`} className="vc ek rg lk gh sl ml il gi hi">
+                        Details
                       </a>
                     </div>
                   </div>
@@ -67,7 +67,7 @@ export default function Blog() {
                       </div>
                     </div>
                     <h4 className="ek tj ml il kk wm xl eq lb">
-                      <a href={`/blogs/${slug}`}>{title}</a>
+                      <a href={`/trainings/${id}`}>{title}</a>
                     </h4>
                   </div>
                 </div>

@@ -109,7 +109,7 @@ This foundation has become our strength in spreading managerial knowledge with t
       </h2>
         <p className="bb on/5 wo/5 hq">
            <div className="flex justify-end">
-  <a href="./blog" className="vc ek rg lk gh sl ml il gi hi">
+  <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi">
     All Blogs
   </a>
 </div>
