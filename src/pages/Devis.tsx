@@ -33,7 +33,7 @@ export default function Devis() {
 console.log("Sending formData:", formData);
 
     try {
-      const response = await fetch('https://app.the-team.tn/api/reclamation-submissions', {
+      const response = await fetch('https://app.the-team.tn/api/devis-submissions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
