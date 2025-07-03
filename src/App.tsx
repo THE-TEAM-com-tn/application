@@ -14,6 +14,7 @@ import TrainingSingle from './pages/TrainingSingle';
 import Page from './pages/Page';
 import Reclamation from './pages/Reclamation';
 import Devis from './pages/Devis';
+import Review from './pages/Review';
 import FormPage from './pages/FormPage';
 import NotFound from './pages/NotFound';
 
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/forms" element={<FormPage />} />
         <Route path="/reclamation" element={<Reclamation />} />
         <Route path="/devis" element={<Devis />} />
+        <Route path="/review" element={<Review />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
