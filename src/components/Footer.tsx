@@ -75,7 +75,7 @@ export default function Footer() {
                      href={footerData?.footer_gmaps_url || ''}
                      className="ml-2 sc xl vb"
                  >
-                  <span className="ml-2">{footerData?.footer_address || 'Loading...'}</span>
+                  <span className="ml-2">{"12 cités des médecins, Manar 2, Tunis" || 'Loading...'}</span>
 
                 </a>
               </li>

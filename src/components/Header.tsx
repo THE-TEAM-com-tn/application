@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import DarkModeToggle from './DarkmodeToggle';
 
 export default function AppHeader() {
   const [page, setPage] = useState('home');
@@ -7,13 +8,11 @@ export default function AppHeader() {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
-  useEffect(() => {
+ useEffect(() => {
     const stored = localStorage.getItem('darkMode');
-    if (stored !== null) {
-      const value = JSON.parse(stored);
-      setDarkMode(value);
-      document.documentElement.classList.toggle('dark', value);
-    }
+    const prefersDark = stored !== null ? JSON.parse(stored) : true;
+    setDarkMode(prefersDark);
+    document.documentElement.classList.toggle('dark', prefersDark);
 
     const handleScroll = () => {
       setStickyMenu(window.scrollY > 20);
@@ -29,6 +28,7 @@ export default function AppHeader() {
 
   return (
     <header className={`g s r vd ya cj ${stickyMenu ? 'hh sm _k dj bl ll' : ''}`}>
+       
       <div className="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
         <div className="vd to/4 tc wf yf">
           
@@ -75,7 +75,7 @@ export default function AppHeader() {
 
                 {dropdown && (
                   <ul className="a tc">
-                    <li><a href="/trainings" className={`xl ${page === 'training' ? 'mk' : ''}`}>Agility</a>
+                    <li><a href="http://localhost:5173/trainings" className={`xl ${page === 'training' ? 'mk' : ''}`}>Agility</a>
                         <li><a href="blog-grid.html" className={`xl ${page === 'blog-grid' ? 'mk' : ''}`}>Business Analysis</a></li>
                         <li><a href="blog-single.html" className={`xl ${page === 'blog-single' ? 'mk' : ''}`}>Lean Management</a></li>
                         <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Project Management</a></li>
@@ -86,7 +86,7 @@ export default function AppHeader() {
                   </ul>
                 )}
               </li>
-              <li><a href="/blogs" className="xl">Blog</a></li>
+              <li><a href="http://localhost:5173/blogs" className="xl">Blog</a></li>
               <li className="c i">
                 <a
                   href="#"
@@ -105,33 +105,39 @@ export default function AppHeader() {
                 {dropdown && (
                   <ul className="a tc">
                     
-                    <li><a href="./devis" className={`xl ${page === 'devis' ? 'mk' : ''}`}>Tailored need</a></li>
-                    <li><a href="./review" className={`xl ${page === 'review' ? 'mk' : ''}`}>Review</a></li>
-                    <li><a href="./reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Complaint</a></li>
+                    <li><a href="http://localhost:5173/devis" className={`xl ${page === 'devis' ? 'mk' : ''}`}>Tailored need</a></li>
+                    <li><a href="http://localhost:5173/review" className={`xl ${page === 'review' ? 'mk' : ''}`}>Review</a></li>
+                    <li><a href="http://localhost:5173/reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Complaint</a></li>
                   </ul>
                 )}
               </li>
             </ul>
           </nav>
 
-          <div className="tc wf ig pb no">
-            <div className="pc h io pa ra">
-              <label className="rc ab i">
-                <input
-                  type="checkbox"
-                  checked={darkMode}
-                  onChange={() => setDarkMode(!darkMode)}
-                  className="pf vd yc uk h r za ab"
-                />
-                <svg className={`th om ${page === 'home' ? 'wn' : ''} ${page === 'home' && stickyMenu ? 'xh' : ''}`} width="25" height="25" viewBox="0 0 25 25" fill="none">
-                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467..." fill="" />
-                </svg>
-                <img className="xc nm" src="images/icon-moon.svg" alt="Moon" />
-              </label>
-            </div>
-           </div>
+           <div className="flex items-center ml-auto">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+            aria-label="Toggle Dark Mode"
+          >
+            {darkMode ? (
+  <img src="/images/icon-moon.svg" alt="Dark Mode" className="w-6 h-6" />
+) : (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-6 h-6 text-yellow-500"
+  >
+    <path d="M12 4.5a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H12.75A.75.75 0 0 1 12 4.5zM4.5 11.25a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H5.25A.75.75 0 0 1 4.5 11.25zM12 19.5a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H12.75A.75.75 0 0 1 12 19.5zM19.5 11.25a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H20.25A.75.75 0 0 1 19.5 11.25zM16.97 7.03a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM7.03 16.97a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM7.03 7.03a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM16.97 16.97a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM12 7.5a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9z" />
+  </svg>
+)}
+
+          </button>
         </div>
       </div>
+      </div>
+
     </header>
   );
 }
