@@ -56,7 +56,7 @@ export default function AppHeader() {
                 <a href="http://localhost:5173/" className={`xl ${page === 'home' ? 'mk' : ''}`}>Home</a>
               </li>
               <li>
-                <a href="index.html#features" className="xl">Calendar</a>
+                <a href="http://localhost:5173/calendar" className="xl">Calendar</a>
               </li>
               <li className="c i">
                 <a

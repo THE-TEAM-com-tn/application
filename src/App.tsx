@@ -16,6 +16,7 @@ import Reclamation from './pages/Reclamation';
 import Devis from './pages/Devis';
 import Review from './pages/Review';
 import FormPage from './pages/FormPage';
+import Calendar from "./pages/Calendar";
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/reclamation" element={<Reclamation />} />
         <Route path="/devis" element={<Devis />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

@@ -145,9 +145,9 @@ This foundation has become our strength in spreading managerial knowledge with t
             <h4 className="ek tj ml il kk wm xl eq lb">
               <a href="blog-single.html">
                 {[
-                  "Free advertising for your online business",
-                  "9 simple ways to improve your design skills",
-                  "Tips to quickly improve your coding speed."
+                  "Blog 1",
+                  "Blog 2", 
+                  "Blog 3"
                 ][idx]}
               </a>
             </h4>
