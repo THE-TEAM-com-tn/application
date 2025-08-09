@@ -3,12 +3,13 @@ import DarkModeToggle from './DarkmodeToggle';
 
 export default function AppHeader() {
   const [page, setPage] = useState('home');
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [navigationOpen, setNavigationOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdownTraining, setDropdownTraining] = useState(false);
+  const [dropdownSupport, setDropdownSupport] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     const stored = localStorage.getItem('darkMode');
     const prefersDark = stored !== null ? JSON.parse(stored) : true;
     setDarkMode(prefersDark);
@@ -27,117 +28,102 @@ export default function AppHeader() {
   }, [darkMode]);
 
   return (
-    <header className={`g s r vd ya cj ${stickyMenu ? 'hh sm _k dj bl ll' : ''}`}>
-       
-      <div className="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
-        <div className="vd to/4 tc wf yf">
-          
+<header className={`app-header fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 ${stickyMenu ? 'sticky-header' : ''}`} style={{ right: 0 }}>
+        <div className="header-container">
+        {/* Bouton hamburger */}
+        <button 
+          className="hamburger-button" 
+          onClick={() => setNavigationOpen(!navigationOpen)}
+        >
+          {/* Icône hamburger */}
+          <div className={`hamburger-icon ${navigationOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
 
-          {/* Hamburger Toggle BTN */}
-          <button className="po rc" onClick={() => setNavigationOpen(!navigationOpen)}>
-            <span className="rc i pf re pd">
-              <span className="du-block h q vd yc">
-                <span className={`rc i r s eh um tg te rd eb ml jl dl ${!navigationOpen ? 'ue el' : ''}`} />
-                <span className={`rc i r s eh um tg te rd eb ml jl fl ${!navigationOpen ? 'ue qr' : ''}`} />
-                <span className={`rc i r s eh um tg te rd eb ml jl gl ${!navigationOpen ? 'ue hl' : ''}`} />
-              </span>
-              <span className="du-block h q vd yc lf">
-                <span className={`rc eh um tg ml jl el h na r ve yc ${!navigationOpen ? 'sd dl' : ''}`} />
-                <span className={`rc eh um tg ml jl qr h s pa vd rd ${!navigationOpen ? 'sd rr' : ''}`} />
-              </span>
-            </span>
-          </button>
-        </div>
-
-        <div className={`vd wo/4 sd qo f ho oo wf yf ${navigationOpen ? 'd hh rm sr td ud qg ug jc yh' : ''}`}>
+        {/* Navigation principale */}
+        <div className={`nav-links-container ${navigationOpen ? 'mobile-menu-open' : ''}`}>
           <nav>
-            <ul className="tc _o sf yo cg ep">
+            <ul className="nav-links-list">
               <li>
-                <a href="http://localhost:5173/" className={`xl ${page === 'home' ? 'mk' : ''}`}>Home</a>
-              </li>
-              <li>
-                <a href="index.html#features" className="xl">Calendar</a>
-              </li>
-              <li className="c i">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setDropdown(!dropdown);
-                  }}
-                  className={`xl tc wf yf bg ${['blog-grid', 'blog-single', 'signin', 'signup', '404'].includes(page) ? 'mk' : ''}`}
+                <a 
+                  href="http://localhost:5173/" 
+                  className={`nav-link ${page === 'home' ? 'active' : ''}`}
                 >
-                  Training
-                  <svg className={`th mm we fd pf ${dropdown ? 'wh' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                  </svg>
+                  Home
                 </a>
+              </li>
+              <li>
+                <a href="index.html#features" className="nav-link">Calendar</a>
+              </li>
+              
+              {/* Menu Training */}
+              <li className="nav-dropdown"
+               onMouseEnter={() => setDropdownTraining(true)}
+              onMouseLeave={() => setDropdownTraining(false)}>
+              <a href="#"className={`nav-link ${dropdownTraining ? 'active' : ''}`}>
+                  Training
+                 <svg className={`dropdown-icon ${dropdownTraining ? 'open' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                 </svg>
+                 </a>
 
-                {dropdown && (
-                  <ul className="a tc">
-                    <li><a href="http://localhost:5173/trainings" className={`xl ${page === 'training' ? 'mk' : ''}`}>Agility</a>
-                        <li><a href="blog-grid.html" className={`xl ${page === 'blog-grid' ? 'mk' : ''}`}>Business Analysis</a></li>
-                        <li><a href="blog-single.html" className={`xl ${page === 'blog-single' ? 'mk' : ''}`}>Lean Management</a></li>
-                        <li><a href="signin.html" className={`xl ${page === 'signin' ? 'mk' : ''}`}>Project Management</a></li>
-                        <li><a href="signup.html" className={`xl ${page === 'signup' ? 'mk' : ''}`}>Process Management</a></li>
-                        <li><a href="signup.html" className={`xl ${page === 'signup' ? 'mk' : ''}`}>Strategic Management</a></li>
-                        <li><a href="404.html" className={`xl ${page === '404' ? 'mk' : ''}`}>SI</a></li>
-                    </li>
+                {dropdownTraining && (
+                  <ul className="dropdown-menu">
+                    <li><a href="http://localhost:5173/trainings" className="nav-link">Agility</a></li>
+                    <li><a href="blog-grid.html" className="nav-link">Business Analysis</a></li>
+                    <li><a href="blog-single.html" className="nav-link">Lean Management</a></li>
+                    <li><a href="signin.html" className="nav-link">Project Management</a></li>
+                    <li><a href="signup.html" className="nav-link">Process Management</a></li>
+                    <li><a href="signup.html" className="nav-link">Strategic Management</a></li>
+                    <li><a href="404.html" className="nav-link">SI</a></li>
                   </ul>
                 )}
               </li>
-              <li><a href="http://localhost:5173/blogs" className="xl">Blog</a></li>
-              <li className="c i">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setDropdown(!dropdown);
-                  }}
-                  className={`xl tc wf yf bg ${['blog-grid', 'blog-single', 'signin', 'signup', '404'].includes(page) ? 'mk' : ''}`}
-                >
-                  Support
-                  <svg className={`th mm we fd pf ${dropdown ? 'wh' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                  </svg>
-                </a>
 
-                {dropdown && (
-                  <ul className="a tc">
-                    
-                    <li><a href="http://localhost:5173/devis" className={`xl ${page === 'devis' ? 'mk' : ''}`}>Tailored need</a></li>
-                    <li><a href="http://localhost:5173/review" className={`xl ${page === 'review' ? 'mk' : ''}`}>Review</a></li>
-                    <li><a href="http://localhost:5173/reclamation" className={`xl ${page === 'reclamation' ? 'mk' : ''}`}>Complaint</a></li>
+              <li><a href="http://localhost:5173/blogs" className="nav-link">Blog</a></li>
+              
+              {/* Menu Support */}
+              <li className="nav-dropdown"
+               onMouseEnter={() => setDropdownSupport(true)}
+               onMouseLeave={() => setDropdownSupport(false)}>
+               <a
+                href="#"className={`nav-link ${dropdownSupport ? 'active' : ''}`}>
+               Support
+               <svg className={`dropdown-icon ${dropdownSupport ? 'open' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+               <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+               </svg>
+               </a>
+
+                {dropdownSupport && (
+                  <ul className="dropdown-menu">
+                    <li><a href="http://localhost:5173/devis" className="nav-link">Tailored need</a></li>
+                    <li><a href="http://localhost:5173/review" className="nav-link">Review</a></li>
+                    <li><a href="http://localhost:5173/reclamation" className="nav-link">Complaint</a></li>
                   </ul>
                 )}
               </li>
             </ul>
           </nav>
-
-           <div className="flex items-center ml-auto">
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-            aria-label="Toggle Dark Mode"
-          >
-            {darkMode ? (
-  <img src="/images/icon-moon.svg" alt="Dark Mode" className="w-6 h-6" />
-) : (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="w-6 h-6 text-yellow-500"
+         </div>
+          {/* Bouton dark mode */}
+          <div className="dark-mode-toggle">
+  <button
+    onClick={() => setDarkMode(!darkMode)}
+    className="dark-mode-button"
+    aria-label="Toggle Dark Mode"
   >
-    <path d="M12 4.5a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H12.75A.75.75 0 0 1 12 4.5zM4.5 11.25a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H5.25A.75.75 0 0 1 4.5 11.25zM12 19.5a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H12.75A.75.75 0 0 1 12 19.5zM19.5 11.25a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 0 1.5H20.25A.75.75 0 0 1 19.5 11.25zM16.97 7.03a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM7.03 16.97a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM7.03 7.03a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM16.97 16.97a.75.75 0 0 1 1.06 0h.01a.75.75 0 0 1-1.06 1.06h-.01a.75.75 0 0 1 0-1.06zM12 7.5a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9z" />
-  </svg>
-)}
-
-          </button>
-        </div>
+    {darkMode ? (
+      <img src="/images/icon-moon.svg" alt="Dark Mode" className="dark-mode-icon" />
+    ) : (
+      <img src="/images/icons8-sun-50.png" alt="Light Mode" className="dark-mode-icon" />
+    )}
+  </button>
+</div>
+        
       </div>
-      </div>
-
     </header>
   );
 }

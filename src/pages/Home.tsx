@@ -5,46 +5,127 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+
+// Animation variants
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const logoItem = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { 
+    opacity: 1, 
+    scale: 1, 
+    transition: { 
+      duration: 0.8,
+      type: 'spring',
+      stiffness: 100
+    } 
+  }
+};
+
+const rightSlideIn = {
+  hidden: { opacity: 0, x: 50 },
+  show: { 
+    opacity: 1, 
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
+const leftSlideIn = {
+  hidden: { opacity: 0, x: -50 },
+  show: { 
+    opacity: 1, 
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  show: { 
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeIn"
+    }
+  }
+};
 
 
 export default function Home() {
   return (
     <>
-      <Header/>
+      <Header />
 
-       <section className="gj do ir hj sp jr i pg">
-  {/* Hero Images */}
+      
+
+      <section className="gj do ir hj sp jr i pg w-full">
+  {/* Conteneur des images */}
   <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
-    <img alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" src="/images/shape-01.svg" />
-    <img alt="shape" className="h q r" src="/images/shape-04-green.svg" />
-
-   <img
-  src="/images/womenn.png"
-  alt="Woman"
-className="absolute inset-0 mx-auto my-auto w-[50%] max-w-[400px] min-w-[200px] h-auto object-contain z-10 translate-x-2"
-/>
-
-
-
+    <img src="images/shape-01" alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" />
+    <img src="images/shape-02" alt="shape" className="xc 2xl:ud-block h u p va" />
+    <img src="images/shape-03" alt="shape" className="xc 2xl:ud-block h v w va" />
+    <img src="images/shape-04-green.svg" alt="shape" className="h q r" />
+    <img src="images/hero.png" alt="Woman" className="h q r ua max-w-full" />
   </div>
 
-  {/* Hero Content */}
-  <div className="bb ze ki xn 2xl:ud-px-0">
+  {/* Contenu texte */}
+  <div className="bb ze ki xn 2xl:ud-px-0 max-w-screen-2xl mx-auto">
     <div className="tc _o">
-      <div className="animate_left jn/2">
-        <h1 className="fk vj zp or kk wm wb">
+      <motion.div 
+        className="animate_left jn/2"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.h1 className="fk vj zp or kk wm wb" variants={logoItem}>
           <img alt="Logo" className="h-6 w-auto ml-0" src="/images/logo.png" />
-        </h1>
-
-        <p className="fq">
+        </motion.h1>
+        
+        <motion.p className="fq" variants={item}>
           The Team is a consulting agency specializing in digital transformation, marketing strategy,
           and technological support. For several years, we have been helping businesses grow by
           providing innovative, tailored, high-impact solutions.
-        </p>
-      </div>
+        </motion.p>
+
+        <motion.div className="tc tf yo zf mb" variants={item}>
+          <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l hover:animate-pulse"
+            >Get Started Now</a
+          >
+
+          <span className="tc sf">
+            <a href="#" className="inline-block ek xj kk wm hover:animate-bounce"> Call us (0123) 456 – 789 </a>
+            <span className="inline-block">For any question or concern</span>
+          </span>
+        </motion.div>
+      </motion.div>
     </div>
   </div>
 </section>
+
+
+
+
 
   
 
@@ -69,53 +150,89 @@ className="absolute inset-0 mx-auto my-auto w-[50%] max-w-[400px] min-w-[200px] 
       </section>
 */}
       {/* About Section */}
-      <section className="ji gp uq 2xl:ud-py-35 pg">
-        <div className="bb ze ki xn wq">
-          <div className="tc wf gg qq">
-            <div className="animate_left xc gn gg jn/2 i">
-              <div>
-                <img src="images/shape-05.svg" alt="Shape" className="h -ud-left-5 x" />
-                <img src="images/about-01-training.png" alt="About" className="ib" />
-                <img src="images/about-02-training.png" alt="About" />
-              </div>
-              <div>
-                <img src="images/shape-06.svg" alt="Shape" />
-                
-              </div>
-            </div>
-            <div className="animate_right jn/2">
-              <h4 className="ek yj mk gb">Why Choose Us ?</h4>
-              <h2 className="fk vj zp pr kk wm qb">We Make Our customers happy by giving Best services.</h2>
-              <p className="uo">Our know-how and competencies are rooted in our mastery of project management domains, combined with a rich, solid, and diverse experience in managing public sector structures.
-This foundation has become our strength in spreading managerial knowledge with the goal of supporting business development and improving organizational performance.</p>
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" className="vc wf hg mb">
-                <span className="tc wf xf be dd rg i gh ua">
-                  <span className="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
-                </span>
-                <span className="kk">SEE HOW WE WORK</span>
-              </a>
-            </div>
-          </div>
+<section className="ji gp uq 2xl:ud-py-35 pg">
+  <div className="bb ze ki xn wq">
+    <div className="tc wf gg qq">
+      <motion.div 
+        className="animate_left xc gn gg jn/2 i"
+        variants={leftSlideIn}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div>
+          <img src="images/shape-05.svg" alt="Shape" className="h -ud-left-5 x" />
+          <img src="images/about-01-training.png" alt="About" className="ib" />
+          <img src="images/about-02-training.png" alt="About" />
         </div>
-      </section>
+        <div>
+          <img src="images/shape-06.svg" alt="Shape" />
+        </div>
+      </motion.div>
+
+      <motion.div 
+        className="animate_right jn/2"
+        variants={rightSlideIn}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <motion.h4 
+          className="ek yj mk "style={{ color: '#FFD700' }}
+          variants={fadeIn}
+        >
+          Why Choose Us ?
+        </motion.h4>
+        
+        <motion.h2 
+          className="fk vj zp pr kk wm qb"
+          variants={fadeIn}
+          transition={{ delay: 0.2 }}
+        >
+          We Make Our customers happy by giving Best services.
+        </motion.h2>
+        
+        <motion.p 
+          className="uo"
+          variants={fadeIn}
+          transition={{ delay: 0.4 }}
+        >
+          Our know-how and competencies are rooted in our mastery of project management domains, 
+          combined with a rich, solid, and diverse experience in managing public sector structures.
+          This foundation has become our strength in spreading managerial knowledge with the goal 
+          of supporting business development and improving organizational performance.
+        </motion.p>
+        
+        <motion.div
+          variants={fadeIn}
+          transition={{ delay: 0.6 }}
+        >
+          <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" className="vc wf hg mb">
+            <span className="tc wf xf be dd rg i gh ua">
+              <span className="nf h vc yc vd rg gh qk -ud-z-1"></span>
+              <img src="images/icon-play.svg" alt="Play" />
+            </span>
+            <span className="kk">SEE HOW WE WORK</span>
+          </a>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 {/* ===== Blog Start ===== */}
 <section className="ji gp uq">
   {/* Section Title Start */}
   <div>
-    <div className="animate_top bb ze rj ki xn vq">
-      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-        Latest Blogs & News
-      </h2>
-        <p className="bb on/5 wo/5 hq">
-           <div className="flex justify-end">
-  <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi">
-    All Blogs
-  </a>
+    <div className="animate_top bb ze rj ki xn vq text-center">
+  <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+    Latest Blogs & News
+  </h2>
+  <div className="mt-6"> {/* Adjust margin as needed */}
+    <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi inline-block">
+      All Blogs
+    </a>
+  </div>
 </div>
-
-        </p>
-    </div>
   </div>
   {/* Section Title End */}
 
@@ -157,118 +274,172 @@ This foundation has become our strength in spreading managerial knowledge with t
     </div>
   </div>
 </section>
-{/* ===== Blog End ===== */}
+{/* ===== Blog End ===== */}     
 
+{/* ===== Services Start ===== */}
+<section className="lj tp kr">
+  {/* Section Title Start */}
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    }}
+  >
+    <div className="relative z-10 bb ze rj ki xn vq">
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        We Offer The Best Quality Service for You
+      </h2>
+      <p className="bb on/5 wo/5 hq">
+        We are here to ensure your needs are met with precision and care.
+      </p>
+    </div>
+  </motion.div>
+  {/* Section Title End */}
 
-
-
-    
-     
-<br>
-</br>
-<br>
-</br>
-<br>
-</br>
-{/*<!-- ===== Services Start ===== -->*/}
-      <section className="lj tp kr">
-        {/*<!-- Section Title Start -->*/}
-        <div>
-            <div className="relative z-10 animate_top bb ze rj ki xn vq">
-                <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-                We Offer The Best Quality Service for You
-                </h2>
-                <p className="bb on/5 wo/5 hq">
-                We are here to ensure your needs are met with precision and care.
-                </p>
-            </div>
+  <div className="bb ze ki xn yq mb en">
+    <div className="wc qf pn xo ng">
+      {/* Service Item 1 */}
+      <motion.div 
+        className="sg oi pi zq ml il am cn _m"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }
+        }}
+      >
+        <div className="flex justify-center mb-4"> {/* Centered icon container */}
+          <img src="images/icon-training.png" alt="Icon" className="mx-auto" />
         </div>
+        <h4 className="ek zj kk wm nb _b text-center">Training Offer</h4>
+        <p className="text-center">Training in project management (PMP®, Agile, SAFe®, PRINCE2®...)</p>
+
+        <div className="tc tf yo zf mb mt-6 flex justify-center">
+          <a href="#" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
+            See our Trainings
+          </a>
+        </div>
+      </motion.div>
+
+      {/* Service Item 2 */}
+      <motion.div 
+        className="sg oi pi zq ml il am cn _m"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } }
+        }}
+      >
+        <div className="flex justify-center mb-4"> {/* Centered icon container */}
+          <img src="images/icon-puzzle.png" alt="Icon" className="mx-auto" />
+        </div>
+        <h4 className="ek zj kk wm nb _b text-center">Offre de conseil</h4>
+        <p className="text-center">Organizational maturity assessments (PM, Agile, quality, etc.)</p>
+        <p className="text-center">Support in establishing a Project Management Office (PMO)</p>
+        <p className="text-center">Definition and deployment of strategic plans</p>
+        <p className="text-center">Consulting in project governance and Agile/SAFe frameworks</p>
+        <p className="text-center">Support in change management and digital transformation</p>
+      </motion.div>
+
+      {/* Service Item 3 */}
+      <motion.div 
+        className="sg oi pi zq ml il am cn _m"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }
+        }}
+      >
+        <div className="flex justify-center mb-4"> {/* Centered icon container */}
+          <img src="images/icone-software.png" alt="Icon" className="mx-auto" />
+        </div>
+        <h4 className="ek zj kk wm nb _b text-center">Software Products</h4>
+        <p className="text-center">E-learning platforms</p>
+        <p className="text-center">Personalized learning experiences</p>
+        <p className="text-center">Course and certification management</p>
+        <p className="text-center">Progress tracking and analytics</p>
+      </motion.div>
+    </div>
+  </div>
+</section>
+{/* ===== Services End ===== */}
 
 
+<section className="gj do ir hj sp jr i pg w-full min-h-[80vh] flex items-center">
+  {/* Content Container */}
+<div className="bb ze ki xn 2xl:ud-px-0 max-w-screen-2xl mx-auto flex flex-row items-center justify-between gap-8">    
+    {/* Text Content - Left Side */}
+    <motion.div 
+      className="tc _o w-full lg:w-1/2"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { 
+          opacity: 1, 
+          x: 0,
+          transition: { 
+            duration: 0.8,
+            ease: "easeOut"
+          }
+        }
+      }}
+    >
+      <div className="animate_left jn/2">
+        <h1 className="fk or kk mb-6 text-4xl md:text-5xl lg:text-6xl" >
+          Do you have a specific need that requires tailored support?
+        </h1>
         
-        {/*<!-- Section Title End -->*/}
+        <p className="text-lg md:text-xl text-gray-600 mb-8">
+          Développez l'habitude d'utiliser nos services pour vous et votre équipe pour développer des solutions sur mesure qui vous permettront d'accomplir efficacement votre rôle.
+        </p>
 
-        <div className="bb ze ki xn yq mb en">
-          <div className="wc qf pn xo ng">
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-training.png" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Training Offer</h4>
-              <p>Training in project management (PMP®, Agile, SAFe®, PRINCE2®…)</p>
-
-
-                <div className="tc tf yo zf mb">
-                                <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l">
-                                   See our Trainings </a>
-                </div>
-
-            </div>
-
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-puzzle.png" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Offre de conseil</h4>
-              <p>Organizational maturity assessments (PM, Agile, quality, etc.)</p>
-
-                <p>Support in establishing a Project Management Office (PMO)</p>
-
-                <p>Definition and deployment of strategic plans</p>
-
-                <p>Consulting in project governance and Agile/SAFe frameworks</p>
-
-                <p>Support in change management and digital transformation</p>
-            </div>
-
-            {/*<!-- Service Item -->*/}
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icone-software.png" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b"> Software Products</h4>
-              <p>E-learning platforms</p> 
-
-<p>Personalized learning experiences</p>
-
-<p>Course and certification management</p>
-
-<p>Progress tracking and analytics</p>
-
-
-            </div>
-          </div>
+        <div className="tc xf">
+          <a href="#" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
+            Submit your Request
+          </a>
         </div>
-    </section>
-      {/*<!-- ===== Services End ===== -->*/}
+      </div>
+    </motion.div>
 
-<section className="gj do ir hj sp jr i pg">
-        {/* Hero Images */}
-        <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
-          
-<img
-  alt="Woman"
-  className="absolute w-6/10 left-[57%] top-[46%] -translate-x-1/2 -translate-y-1/2 ua"
-  src="\images\womennn.png"
-/>
-
-        </div>
-
-        {/* Hero Content */}
-        <div className="bb ze ki xn 2xl:ud-px-0">
-          <div className="tc _o">
-            <div className="animate_left jn/2">
-  <h1 className="fk vj zp or kk wm wb">
-    Do you have a <br></br>
-    specific need that<br></br>requires tailored support?
-  </h1>
-
-              <div className="tc xf">
-                    <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l">
-                                   Submit your Request </a>
-          </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
+    {/* Image Content - Right Side */}
+    <motion.div
+      className="w-full lg:w-1/2 flex justify-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0, x: 50 },
+        visible: { 
+          opacity: 1, 
+          x: 0,
+          transition: { 
+            duration: 0.8,
+            ease: "easeOut"
+          }
+        }
+      }}
+    >
+      <div className="animate_right relative">
+        {/* Replace with your actual image */}
+        <img 
+          src="images/shape-home.png" 
+          alt="Tailored support illustration"
+         className="rounded-lg shadow-xl h-auto max-w-[600px] w-full"
+        />
+      </div>
+    </motion.div>
+  </div>
+</section>
 
 {/* ===== Clients Start ===== */}
 <section className="pj vp mr">
@@ -300,176 +471,87 @@ This foundation has become our strength in spreading managerial knowledge with t
 {/* ===== Clients End ===== */}
 
 
- {/* ===== Testimonials Start ===== */}
-      <section className="hj rp hr">
-        {/* Section Title Start */}
-        <div className="animate_top bb ze rj ki xn vq text-center">
-          <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-            Client’s Testimonials
-          </h2>
-        </div>
-        {/* Section Title End */}
+{/* ===== Testimonials Start ===== */}
+<section className="hj rp hr">
+  {/* Section Title Start */}
+  <div className="animate_top bb ze rj ki xn vq text-center">
+    <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+      Client's Testimonials
+    </h2>
+  </div>
+  {/* Section Title End */}
 
-        <div className="bb ze ki xn ar">
-          <div className="animate_top jb cq">
+  <div className="bb ze ki xn ar">
+    <div className="animate_top jb cq">
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        loop={true}
+        autoplay={{ delay: 4000 }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        spaceBetween={30}
+        slidesPerView={1}
+        className="relative"
+      >
+        {/* Slide 1 - With quote icon and proper italics */}
+        <SwiperSlide>
+          <div className="flex flex-row items-start p-8 rounded-lg shadow bg-green-50">
+            {/* Larger image container */}
+            <div className="mr-10 w-[220px] flex-shrink-0">
+              <img 
+                src="/images/oussema-mellouli.png" 
+                alt="User" 
+                className="w-full h-auto rounded-lg object-cover"
+              />
+            </div>
             
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              loop={true}
-              autoplay={{ delay: 4000 }}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-              spaceBetween={30}
-              slidesPerView={1}
-              className="relative"
-            >
-              {/* Slide 1 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/oussema-mellouli.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
-Thank you and best wishes going forward.                </p>
-                  <span className="rc ek xj kk wm zb block">Oussema Mellouli</span>
-                  <span className="rc">Olympic and World Champion in Swimming</span>
-                </div>
-              </SwiperSlide>
-              {/* Slide 2 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/tarekksontini.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    Thank you for the warm welcome and the quality of the training content. The trainer, Ms. Safiya, is highly competent and attentive. She successfully shared her knowledge and experience while encouraging discussions among participants.
-I highly recommend the PMP training to my entire network on Facebook, LinkedIn, and beyond, at THE TEAM.
-Thank you also for the gifts 🙂
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Tarek KSONTINI</span>
-                  <span className="rc">Pre-Project & Costing Manager - SAFRAN</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 3 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/rimabenamor.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    I highly recommend THE TEAM for management training. I sincerely thank Ms. Safiya, the trainer, for her excellent tools and support, which helped me obtain the PMP certificate.
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Rima Ben Amor</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 4 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/saharjomli.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    After months of consistent effort, balancing work, studies, and personal life, I am now PMP certified and fortunate to have scored "Above Target" in all domains. I obtained this certification from the Project Management Institute. Special thanks to THE TEAM, Safiya ZBIDI, Meriem SKIK, Monia Sahbani, Abdelmalek Sfaxi, and Imen Gharbi for their support. 
-~ Anyone who stops learning is old; anyone who keeps learning stays young ~
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Sahar JOMLI</span>
-                  <span className="rc">Project Manager, Business Process Reengineering - ENDA TAMWEEL</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 5 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/chawkiboumallouga.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    Another international achievement 😊😊 This time from the American institute PMI. "..." Many thanks to Ms. Safiya ZBIDI for sharing her know-how and life experience with us. Thanks to the entire team at The Team. Thanks to all my colleagues.
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Chawki Boumallouga</span>
-                  <span className="rc">Project Manager and Dynamics NAV Expert</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 6 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/anisferhani.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    I’m happy to share that I’ve obtained a new certification: Entry Certificate in Business Analysis™ from IIBA!
-Thanks to my coaches Abdelkader AYED CBAP®, PMP®, CISA®, COBIT5® and Ms. Safiya Ben Abderrahmen ZBIDI, MBA, PMP, ACP, RMP, PECB, PSM, CBAP.
-Thanks to The Team: Agile Management & Consulting
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Anis FERHANI</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 7 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/sansphoto.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    Excellent welcome, professionalism, and quality training. Special thanks to Ms. Meriem Skik for ensuring the smooth progress of the training.
-Bravo and keep up the good work.
-A wonderful experience that I sincerely look forward to repeating.
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Radhia Satouri</span>
-                </div>
-              </SwiperSlide>
-
-            {/* Slide 8 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/mohamedjaffel.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-A truly effective experience. Thank you for the method, the atmosphere, and the group’s energy.
-Thanks to Ms. Safia, a very pleasant and lively person. She provided a content-rich training with many exercises, promoting group work in a respectful, supportive, and encouraging environment.
-I am very satisfied with both the content and the delivery.                  </p>
-                  <span className="rc ek xj kk wm zb block">Mohamed JAFFEL</span>
-                  <span className="rc">Methods Manager at FIGIAC Aero Tunisie
-Feedback on PRACTICAL MANAGEMENT Training</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 9 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/mounafridhi.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-                    J’ai eu la chance d’assister à une session de formation sur le management de projet animée par Mr Ezzedine Abassi. J’ai découvert un professionnel de grande qualité. Il possède un talent avéré pour le management de projet. Bienveillant, motivant et empathique. Son énergie est contagieuse et sa passion pour les sujets présentés sont inspirantes et remarquables.
-
-
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Mouna Fridhi</span>
-                  <span className="rc">Experte Technique en Transformation Digitale - GIZ</span>
-                </div>
-              </SwiperSlide>
-
-              {/* Slide 10 */}
-              <SwiperSlide>
-                <div className="i hh rm sg vk xm bi qj text-center p-8 rounded shadow bg-green-50">
-                  <img src="/images/sansphotohomme.png" alt="User" className="w-auto h-auto max-w-[100px] max-h-[100px] mx-auto rounded-full mb-4 object-cover object-center" />
-                  <img src="/images/icon-quote.svg" alt="Quote" className="mx-auto mb-4" />
-                  <p className="ek ik xj _p kc fb mb-4">
-I have just celebrated earning my PMP certification with you, and I am deeply grateful for your help and efforts in the training. I wish to express my sincere appreciation and hope to continue advancing in this field to enhance my performance.
-
-
-                  </p>
-                  <span className="rc ek xj kk wm zb block">Ammar Abdelkarim</span>
-                </div>
-              </SwiperSlide>
-
-             
-            </Swiper>
+            {/* Text content with quote icon and italics */}
+            <div className="flex-1">
+              <img src="/images/icon-quote.svg" alt="Quote" className="mb-4" />
+              <div className="mb-6">
+                <p className="ek ik xj _p kc fb italic"> {/* Italic applied here */}
+                  I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
+                  Thank you and best wishes going forward.
+                </p>
+              </div>
+              <div className="border-t border-gray-200 pt-4">
+                <span className="rc ek xj kk wm zb block not-italic">Oussema Mellouli</span> {/* Not italic */}
+                <span className="rc not-italic">Olympic and World Champion in Swimming</span> {/* Not italic */}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* ===== Testimonials End ===== */}
+        </SwiperSlide>
 
+        {/* Slide 2 */}
+        <SwiperSlide>
+          <div className="flex flex-row items-start p-8 rounded-lg shadow bg-green-50">
+            <div className="mr-10 w-[220px] flex-shrink-0">
+              <img 
+                src="/images/tarekksontini.png" 
+                alt="User" 
+                className="w-full h-auto rounded-lg object-cover"
+              />
+            </div>
+            <div className="flex-1">
+              <img src="/images/icon-quote.svg" alt="Quote" className="mb-4" />
+              <div className="mb-6">
+                <p className="ek ik xj _p kc fb italic">
+                  Thank you for the warm welcome and the quality of the training content. The trainer, Ms. Safiya, is highly competent and attentive.
+                </p>
+              </div>
+              <div className="border-t border-gray-200 pt-4">
+                <span className="rc ek xj kk wm zb block not-italic">Tarek KSONTINI</span>
+                <span className="rc not-italic">Pre-Project & Costing Manager - SAFRAN</span>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  </div>
+</section>
 
 {/* Team Section */}
 

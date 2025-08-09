@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
 
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="vd ro tc sf rn un gg vn">
 
           <div className="animate_top">
             <h4 className="kk wm tj ec">Contact</h4>
@@ -75,26 +75,26 @@ export default function Footer() {
                      href={footerData?.footer_gmaps_url || ''}
                      className="ml-2 sc xl vb"
                  >
-                  <span className="ml-2">{"12 cités des médecins, Manar 2, Tunis" || 'Loading...'}</span>
+                  <span className="ml-2">12 cités des médecins, Manar 2, Tunis</span>
 
                 </a>
               </li>
               <li>
                 {/* <span className="sc xl vb">Phone:</span>*/}
-                <span className="sc xl vb">{footerData?.footer_phone_number || 'Loading...'}</span>
+                <span className="sc xl vb">{footerData?.footer_phone_number }</span>
               </li>
               <li>
                {/* <span className="sc xl vb">Mobile:</span>*/}
-                <span className="sc xl vb">{footerData?.footer_mobile_number || 'Loading...'}</span>
+                <span className="sc xl vb">{footerData?.footer_mobile_number}</span>
               </li>
               <li>
                 <span className="sc xl vb">
                 <a
-                    href={`mailto:${footerData?.footer_contact_email || ''}`}
+                    href={`mailto:${footerData?.footer_contact_email }`}
 
                     className="ml-2 sc xl vb"
                 >
-                  {footerData?.footer_contact_email || 'Loading...'}
+                  {footerData?.footer_contact_email }
                 </a></span>
               </li>
             </ul>
