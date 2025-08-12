@@ -42,7 +42,7 @@ export default function AppHeader() {
                 </a>
               </li>
               <li>
-                <a href="index.html#features" className="nav-link">Calendar</a>
+                <a href="./calendar" className="nav-link">Calendar</a>
               </li>
               
               {/* Training dropdown */}

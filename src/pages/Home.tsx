@@ -1,12 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -76,6 +74,19 @@ const fadeIn = {
 
 
 export default function Home() {
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+    
+    // Check immediately on load
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
             <div className="dark:bg-gray-900 dark:text-white"> 
 
@@ -131,7 +142,7 @@ export default function Home() {
         </motion.p>
 
         <motion.div className="tc tf yo zf mb" variants={item}>
-          {/* Updated Button - Matches Other Sections */}
+          {/* Updated Button - Matches Other Sections 
           <motion.a 
             href="#"
             className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300"
@@ -149,7 +160,7 @@ export default function Home() {
               Call us (0123) 456 – 789
             </motion.a>
             <span className="inline-block">For any question or concern</span>
-          </motion.span>
+          </motion.span>*/}
         </motion.div>
       </motion.div>
     </div>
@@ -388,7 +399,7 @@ export default function Home() {
         <p className="text-center">Training in project management (PMP®, Agile, SAFe®, PRINCE2®...)</p>
 
         <div className="tc tf yo zf mb mt-6 flex justify-center">
-          <a href="#" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
+          <a href="./trainings" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
             See our Trainings
           </a>
         </div>
@@ -469,11 +480,10 @@ export default function Home() {
         </h1>
         
         <p className="text-lg md:text-xl text-gray-600 mb-8">
-          Développez l'habitude d'utiliser nos services pour vous et votre équipe pour développer des solutions sur mesure qui vous permettront d'accomplir efficacement votre rôle.
-        </p>
+Develop the habit of using our services for yourself and your team to create tailored solutions that will enable you to effectively fulfill your role.        </p>
 
         <div className="tc xf">
-          <a href="#" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
+          <a href="./devis" className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
             Submit your Request
           </a>
         </div>
@@ -928,15 +938,33 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
 <Footer />
 
       
-{/* ====== Back To Top Start ===== */}
 <button
-  className="xc wf xf ie ld vg sr gh tr g sa ta _a"
-  onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
->
-  <svg className="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
-  </svg>
-</button>
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`back-to-top-button ${isAtTop ? 'is-at-top' : ''}`}
+        aria-label="Back to top"
+      >
+        {isAtTop ? (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path 
+              d="M5 15L12 8L19 15" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        ) : (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path 
+              d="M19 9L12 16L5 9" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
+      </button>
 
 
     </>

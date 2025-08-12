@@ -55,7 +55,7 @@ setStatus(errorData.message || 'Something went wrong.');
 return (
     <main>
       <Header />
-<section id="support" className="i pg fhh rm ji gp uq">
+<section id="support" className="i pg rm ji gp uq">
   {/* Bg Shapes */}
   <img src="images/shape-06.svg" alt="Shape" className="h aa y" />
   <img src="images/shape-03.svg" alt="Shape" className="h ca u" />
@@ -75,7 +75,7 @@ return (
         {/* Form */}
         <div className="i va bb ye ki xn wq jb mo">
           <div className="tc uf sn tf rn un zf xl:gap-10">
-            <div className="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+            <div className="animate_top w-full nn/5 vo/3 vk sg sm yh tq bg-white dark:bg-gray-800">
               <form onSubmit={handleSubmit}>
                 <div className="tc sf yo ap zf ep qb">
                   <div className="vd to/2">

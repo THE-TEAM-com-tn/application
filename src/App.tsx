@@ -10,12 +10,12 @@ import Blog from './pages/Blog';
 import BlogSingle from './pages/BlogSingle';
 import Training from './pages/Training';
 import TrainingSingle from './pages/TrainingSingle';
-import Page from './pages/Page';
 import Reclamation from './pages/Reclamation';
 import Devis from './pages/Devis';
 import Review from './pages/Review';
 import FormPage from './pages/FormPage';
 import NotFound from './pages/NotFound';
+import Calendar from './pages/calendar';
 
 export default function App() {
   return (
@@ -26,12 +26,14 @@ export default function App() {
         <Route path="/blogs/:slug" element={<BlogSingle />} />
         <Route path="/trainings" element={<Training />} />
         <Route path="/trainings/:slug" element={<TrainingSingle />} />
-        <Route path="/pages/:id" element={<Page />} />
+        
         <Route path="/forms" element={<FormPage />} />
         <Route path="/reclamation" element={<Reclamation />} />
         <Route path="/devis" element={<Devis />} />
         <Route path="/review" element={<Review />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/calendar" element={<Calendar />} />
+
       </Routes>
     </Router>
   );

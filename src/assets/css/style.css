@@ -25,7 +25,6 @@
 html, body, #root {
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -3024,3 +3023,45 @@ section.hj .ek.ik.xj._p.kc.fb {
   color: #FACC15 !important;
 }
 
+/* Back to Top Button - Always Visible Version */
+.back-to-top-button {
+  position: fixed;
+  right: 40px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  background: #259d79; /* Your green color */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  /* Start at bottom */
+  bottom: 40px;
+}
+
+/* Moves to top when at page top */
+.is-at-top .back-to-top-button {
+  bottom: auto;
+  top: 40px;
+}
+
+.back-to-top-button:hover {
+  background: #259d79; /* Darker green */
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+.dark .back-to-top-button {
+  background: #259d79; /* Keep same green in dark mode */
+  
+}
+
+.dark .back-to-top-button:hover {
+  background: #259d79; /* Darker green hover */
+}
