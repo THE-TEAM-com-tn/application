@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './assets/css/style.css'; // style de la template
-import App from './App.tsx'
+// main.tsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './assets/css/style.css';
+import App from './App.tsx';
+import { DarkModeProvider } from './contexts/DarkModeContext';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <DarkModeProvider>
+      <App />
+    </DarkModeProvider>
   </StrictMode>,
-)
+);

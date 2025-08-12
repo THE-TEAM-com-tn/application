@@ -263,6 +263,19 @@ header {
   }
 }
 
+
+.gj.do.ir.hj.sp.jr.i.pg {
+  align-items: center !important; /* Center vertically */
+}
+
+.tc._o h1,
+.tc._o p,
+.tc._o .tc.xf {
+  margin-bottom: 1.5rem; /* Space between title, text, and button */
+}
+
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -270,7 +283,7 @@ header {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424 t;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -401,6 +414,13 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+ @media (prefers-color-scheme: dark) {
+  input::placeholder,
+  textarea::placeholder {
+    color: white;
+    opacity: 0.7; /* optional for softer look */
   }
 }
 
@@ -1700,11 +1720,15 @@ background-color: #fff;
   --tw-bg-opacity: 1;
   background-color: #457b6c;
 }
-.fh{
+.fh {
   --tw-bg-opacity: 1;
-background-color: #eaf4f2;
-width: 2000px;
-height: 1000px;
+  background-color: #eaf4f2;
+  width: 2000px;
+  height: 1000px;
+}
+
+.dark .fh {
+  background-color: #1a2e35; /* Or your preferred dark color */
 }
 .fhh{
   --tw-bg-opacity: 1;
@@ -2972,5 +2996,31 @@ background-color: #ffffff;
     font-size: 40px;
     line-height: 42px;
   }
+}
+
+/* Put this at the very bottom of style.css so it loads last */
+section.hj .ek.ik.xj._p.kc.fb {
+  font-style: italic !important;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+:root.dark body {
+  background-color: #111827 !important;
+  color: white !important;
+}
+
+.dark [class^="bg-"]:not(.bg-transparent):not(.bg-current):not(.bg-black):not(.bg-white) {
+  background-color: var(--tw-bg-opacity) !important;
+}
+
+/* Force all headings to respect dark mode */
+.dark h2, .dark h1 {
+  color: white !important;
+}
+.dark h4 {
+  color: #FACC15 !important;
 }
 

@@ -6,6 +6,9 @@ import 'swiper/css/navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+
+
 
 // Animation variants
 const container = {
@@ -74,22 +77,41 @@ const fadeIn = {
 
 export default function Home() {
   return (
+            <div className="dark:bg-gray-900 dark:text-white"> 
+
     <>
+
       <Header />
 
-      
-
       <section className="gj do ir hj sp jr i pg w-full">
-  {/* Conteneur des images */}
+  {/* Images Container */}
   <div className="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
     <img src="images/shape-01" alt="shape" className="xc 2xl:ud-block h t -ud-left-[10%] ua" />
     <img src="images/shape-02" alt="shape" className="xc 2xl:ud-block h u p va" />
     <img src="images/shape-03" alt="shape" className="xc 2xl:ud-block h v w va" />
-    <img src="images/shape-04-green.svg" alt="shape" className="h q r" />
-    <img src="images/hero.png" alt="Woman" className="h q r ua max-w-full" />
+    
+    <motion.img 
+      src="images/bubble.svg" 
+      alt="shape" 
+      className="h q r"
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    />
+    
+    <motion.img 
+      src="images/hero.png" 
+      alt="Woman" 
+      className="h q r ua max-w-full"
+      variants={rightSlideIn}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    />
   </div>
 
-  {/* Contenu texte */}
+  {/* Text Content */}
   <div className="bb ze ki xn 2xl:ud-px-0 max-w-screen-2xl mx-auto">
     <div className="tc _o">
       <motion.div 
@@ -99,7 +121,7 @@ export default function Home() {
         animate="show"
       >
         <motion.h1 className="fk vj zp or kk wm wb" variants={logoItem}>
-          <img alt="Logo" className="h-6 w-auto ml-0" src="/images/logo.png" />
+          <img alt="Logo" className="h-6 w-auto ml-0" src="/images/logoo.png" />
         </motion.h1>
         
         <motion.p className="fq" variants={item}>
@@ -109,21 +131,30 @@ export default function Home() {
         </motion.p>
 
         <motion.div className="tc tf yo zf mb" variants={item}>
-          <a href="#" className="ek jk lk gh gi hi rg ml il vc _d _l hover:animate-pulse"
-            >Get Started Now</a
+          {/* Updated Button - Matches Other Sections */}
+          <motion.a 
+            href="#"
+            className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
+            Get Started Now
+          </motion.a>
 
-          <span className="tc sf">
-            <a href="#" className="inline-block ek xj kk wm hover:animate-bounce"> Call us (0123) 456 – 789 </a>
+          <motion.span className="tc sf" variants={item}>
+            <motion.a 
+              href="#" 
+              className="inline-block ek xj kk wm hover:text-yellow-500 transition-colors"
+            >
+              Call us (0123) 456 – 789
+            </motion.a>
             <span className="inline-block">For any question or concern</span>
-          </span>
+          </motion.span>
         </motion.div>
       </motion.div>
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -219,35 +250,75 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 {/* ===== Blog Start ===== */}
 <section className="ji gp uq">
   {/* Section Title Start */}
-  <div>
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-50px" }}
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    }}
+  >
     <div className="animate_top bb ze rj ki xn vq text-center">
-  <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-    Latest Blogs & News
-  </h2>
-  <div className="mt-6"> {/* Adjust margin as needed */}
-    <a href="./blogs" className="vc ek rg lk gh sl ml il gi hi inline-block">
-      All Blogs
-    </a>
-  </div>
-</div>
-  </div>
-  {/* Section Title End */}
+      <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+        Latest Blogs & News
+      </h2>
+      <div className="mt-6">
+        <motion.a
+          href="./blogs"
+          className="vc ek rg lk gh sl ml il gi hi inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          All Blogs
+        </motion.a>
+      </div>
+    </div>
+  </motion.div>
 
   <div className="bb ye ki xn vq jb jo">
     <div className="wc qf pn xo zf iq">
       {["01", "02", "03"].map((n, idx) => (
-        <div key={idx} className="animate_top sg vk rm xm">
+        <motion.div 
+          key={idx}
+          className="animate_top sg vk rm xm"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { 
+              opacity: 1, 
+              y: 0,
+              transition: { 
+                duration: 0.6,
+                delay: idx * 0.1
+              }
+            }
+          }}
+        >
+          {/* Blog Card - Restored Original Structure */}
           <div className="c rc i z-1 pg">
             <img className="w-full" src={`images/blog-${n}.png`} alt="Blog" />
+            
+            {/* Transparent Overlay - Restored */}
             <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-              <a href="./blog-single.html" className="vc ek rg lk gh sl ml il gi hi">
+              <motion.a 
+                href="./blog-single.html" 
+                className="vc ek rg lk gh sl ml il gi hi"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 Read More
-              </a>
+              </motion.a>
             </div>
           </div>
+
+          {/* Blog Content - Restored Original Classes */}
           <div className="yh">
             <div className="tc uf wf ag jq">
               <div className="tc wf ag">
@@ -263,19 +334,17 @@ export default function Home() {
               <a href="blog-single.html">
                 {[
                   "Free advertising for your online business",
-                  "9 simple ways to improve your design skills",
+                  "9 simple ways to improve your design skills", 
                   "Tips to quickly improve your coding speed."
                 ][idx]}
               </a>
             </h4>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   </div>
 </section>
-{/* ===== Blog End ===== */}     
-
 {/* ===== Services Start ===== */}
 <section className="lj tp kr">
   {/* Section Title Start */}
@@ -375,7 +444,7 @@ export default function Home() {
 
 <section className="gj do ir hj sp jr i pg w-full min-h-[80vh] flex items-center">
   {/* Content Container */}
-<div className="bb ze ki xn 2xl:ud-px-0 max-w-screen-2xl mx-auto flex flex-row items-center justify-between gap-8">    
+ <div className="bb ze ki xn 2xl:ud-px-0 max-w-screen-2xl mx-auto flex flex-row items-center justify-between gap-8">    
     {/* Text Content - Left Side */}
     <motion.div 
       className="tc _o w-full lg:w-1/2"
@@ -495,30 +564,28 @@ export default function Home() {
         slidesPerView={1}
         className="relative"
       >
-        {/* Slide 1 - With quote icon and proper italics */}
+        {/* Slide 1 */}
         <SwiperSlide>
-          <div className="flex flex-row items-start p-8 rounded-lg shadow bg-green-50">
-            {/* Larger image container */}
-            <div className="mr-10 w-[220px] flex-shrink-0">
+          <div className="flex flex-row items-center p-8 rounded-lg shadow bg-green-50">
+            <div className="mr-10 w-[200px] h-[200px] flex-shrink-0">
               <img 
                 src="/images/oussema-mellouli.png" 
                 alt="User" 
-                className="w-full h-auto rounded-lg object-cover"
+                className="w-full h-full rounded-full object-cover"
               />
             </div>
-            
-            {/* Text content with quote icon and italics */}
             <div className="flex-1">
               <img src="/images/icon-quote.svg" alt="Quote" className="mb-4" />
               <div className="mb-6">
-                <p className="ek ik xj _p kc fb italic"> {/* Italic applied here */}
-                  I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
+                <p className="text-base text-gray-700 italic leading-relaxed"> 
+                  I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. 
+                  His energy is contagious, and his passion for the topics covered is inspiring and remarkable.
                   Thank you and best wishes going forward.
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-4">
-                <span className="rc ek xj kk wm zb block not-italic">Oussema Mellouli</span> {/* Not italic */}
-                <span className="rc not-italic">Olympic and World Champion in Swimming</span> {/* Not italic */}
+                <span className="block font-semibold text-gray-900 not-italic">Oussema Mellouli</span>
+                <span className="text-sm text-gray-500 not-italic">Olympic and World Champion in Swimming</span>
               </div>
             </div>
           </div>
@@ -526,24 +593,25 @@ export default function Home() {
 
         {/* Slide 2 */}
         <SwiperSlide>
-          <div className="flex flex-row items-start p-8 rounded-lg shadow bg-green-50">
-            <div className="mr-10 w-[220px] flex-shrink-0">
+          <div className="flex flex-row items-center p-8 rounded-lg shadow bg-green-50">
+            <div className="mr-10 w-[200px] h-[200px] flex-shrink-0">
               <img 
                 src="/images/tarekksontini.png" 
                 alt="User" 
-                className="w-full h-auto rounded-lg object-cover"
+                className="w-full h-full rounded-full object-cover"
               />
             </div>
             <div className="flex-1">
               <img src="/images/icon-quote.svg" alt="Quote" className="mb-4" />
               <div className="mb-6">
-                <p className="ek ik xj _p kc fb italic">
-                  Thank you for the warm welcome and the quality of the training content. The trainer, Ms. Safiya, is highly competent and attentive.
+<p className="testimonial-text text-base text-gray-700 leading-relaxed">
+                  Thank you for the warm welcome and the quality of the training content. 
+                  The trainer, Ms. Safiya, is highly competent and attentive.
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-4">
-                <span className="rc ek xj kk wm zb block not-italic">Tarek KSONTINI</span>
-                <span className="rc not-italic">Pre-Project & Costing Manager - SAFRAN</span>
+                <span className="block font-semibold text-gray-900 not-italic">Tarek KSONTINI</span>
+                <span className="text-sm text-gray-500 not-italic">Pre-Project & Costing Manager - SAFRAN</span>
               </div>
             </div>
           </div>
@@ -553,12 +621,13 @@ export default function Home() {
   </div>
 </section>
 
+
 {/* Team Section */}
 
 
       <section className="i pg ji gp uq">
         
-        <span className="rc h s r vd fd/5 fh rm"></span>
+       <span className="rc h s r vd fd/5 fh rm dark:fh-dark"></span>
         <img src="images/shape-08.svg" alt="Shape Bg" className="h q r absolute z-0" />
         <img src="images/shape-09.svg" alt="Shape" className="of h y z/2" />
         <img src="images/shape-10.svg" alt="Shape" className="h _ aa" />
@@ -708,7 +777,7 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
         </div>
       </section>
 {/* ===== Contact Start ===== */}
-<section id="support" className="i pg fhh rm ji gp uq">
+<section id="support" className="i rm ji gp uq">
   {/* Bg Shapes */}
   <img src="images/shape-06.svg" alt="Shape" className="h aa y" />
   <img src="images/shape-03.svg" alt="Shape" className="h ca u" />
@@ -731,7 +800,7 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
             
   <div className="i va bb ye ki xn wq jb mo">
     <div className="tc uf sn tf rn un zf xl:gap-10">
-      <div className="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg">
+      <div className="animate_top w-full mn/5 to/3 vk sg  sm yh rq i pg">
         {/* Bg Shapes */}
         <img src="images/shape-03.svg" alt="Shape" className="h la x wd" />
         <img src="images/shape-06.svg" alt="Shape" className="h la ma ne kf" />
@@ -783,73 +852,74 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
         </div>
       </div>
 
-      <div className="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
-        <form action="https://formbold.com/s/unique_form_id" method="POST">
-          <div className="tc sf yo ap zf ep qb">
-            <div className="vd to/2">
-              <label className="rc ac" htmlFor="fullname">Full name</label>
-              <input
-                type="text"
-                name="fullname"
-                id="fullname"
-                placeholder="Safiya Zbidi"
-                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-              />
-            </div>
-
-            <div className="vd to/2">
-              <label className="rc ac" htmlFor="email">Email address</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="example@gmail.com"
-                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-              />
-            </div>
-          </div>
-
-          <div className="tc sf yo ap zf ep qb">
-            <div className="vd to/2">
-              <label className="rc ac" htmlFor="phone">Phone number</label>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="+216 92 600 991"
-                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-              />
-            </div>
-
-            <div className="vd to/2">
-              <label className="rc ac" htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Type your subject"
-                className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-              />
-            </div>
-          </div>
-
-          <div className="fb">
-            <label className="rc ac" htmlFor="message">Message</label>
-            <textarea
-              placeholder="Message"
-              rows="4"
-              name="message"
-              id="message"
-              className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"
-            ></textarea>
-          </div>
-
-          <div className="tc xf">
-                        <button className="vc text-green-500 lk gh ml il hi gi _l">Send Message</button>
-
-          </div>
-        </form>
+      <div className="animate_top w-full nn/5 vo/3 vk sg sm yh tq bg-white dark:bg-gray-800">
+  <form action="https://formbold.com/s/unique_form_id" method="POST">
+    <div className="tc sf yo ap zf ep qb">
+      <div className="vd to/2">
+        <label className="rc ac text-gray-800 dark:text-white" htmlFor="fullname">Full name</label>
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="Safiya Zbidi"
+          className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+        />
       </div>
+
+      <div className="vd to/2">
+        <label className="rc ac text-gray-800 dark:text-white" htmlFor="email">Email address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@gmail.com"
+          className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+        />
+      </div>
+    </div>
+
+    <div className="tc sf yo ap zf ep qb">
+      <div className="vd to/2">
+        <label className="rc ac text-gray-800 dark:text-white" htmlFor="phone">Phone number</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="+216 92 600 991"
+          className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+        />
+      </div>
+
+      <div className="vd to/2">
+        <label className="rc ac text-gray-800 dark:text-white" htmlFor="subject">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Type your subject"
+          className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+        />
+      </div>
+    </div>
+
+    <div className="fb">
+      <label className="rc ac text-gray-800 dark:text-white" htmlFor="message">Message</label>
+      <textarea
+        placeholder="Message"
+        rows="4"
+        name="message"
+        id="message"
+        className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+      ></textarea>
+    </div>
+
+    <div className="tc xf">
+      <button className="vc ek rg lk gh sl ml il gi hi !text-white hover:!bg-yellow-500 transition-colors duration-300">
+        Send Message
+      </button>
+    </div>
+  </form>
+</div>
     </div>
   </div>
 </section>
@@ -867,6 +937,9 @@ Certified in: TSPM™,PSM™,SFC™, SSYB™
     <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
   </svg>
 </button>
+
+
     </>
+      </div>
   );
 }

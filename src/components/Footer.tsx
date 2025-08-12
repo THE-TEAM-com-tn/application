@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
 
 
 
@@ -21,7 +19,7 @@ export default function Footer() {
    {/* Footer Section */}
             <footer>
             
-  <div className="bb zee ki xn 2xl:ud-px-0">
+  <div className="bb  ki xn 2xl:ud-px-0">
     {/* Footer Top*/}
     <div className="ji gp">
       <div className="tc uf ap gg fp">
@@ -145,4 +143,3 @@ export default function Footer() {
 
  </>  );
 }
-
