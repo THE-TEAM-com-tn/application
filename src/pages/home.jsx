@@ -1,8 +1,26 @@
-import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { useState, useEffect } from 'react';
 
 
 const Home = () => {
+
+const [scrollTop, setScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollTop(window.pageYOffset > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
 
   useEffect(() => {
    // Animate Left
@@ -59,6 +77,7 @@ const Home = () => {
     });
   }, []);
   
+  
   return (
     <main>
       {/* ===== Hero Start ===== */}
@@ -89,12 +108,10 @@ const Home = () => {
           <div className="tc _o">
             <div className="animate_left jn/2">
               <h1 className="fk vj zp or kk wm wb">
-                We specialize in UI/UX, Web Development, Digital Marketing.
+                The Tunisian Establishment for Agile Management
               </h1>
               <p className="fq">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus
-                consequat varius nisi quis, posuere magna.
+                The Team is a consulting agency specializing in digital transformation, marketing strategy, and technological support. For several years, we have been helping businesses grow by providing innovative, tailored, high-impact solutions.
               </p>
 
               <div className="tc tf yo zf mb">
@@ -104,7 +121,7 @@ const Home = () => {
 
                 <span className="tc sf">
                   <a href="#" className="inline-block ek xj kk wm">
-                    Call us (0123) 456 – 789
+                    Call us +216 92 600 991
                   </a>
                   <span className="inline-block">
                     For any question or concern
@@ -187,9 +204,10 @@ const Home = () => {
                 We Make Our customers happy by giving Best services.
               </h2>
               <p className="uo">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum.
+                Our know-how and competencies are rooted in our mastery of project management domains, 
+               combined with a rich, solid, and diverse experience in managing public sector structures.
+               This foundation has become our strength in spreading managerial knowledge with the goal 
+               of supporting business development and improving organizational performance.
               </p>
 
               <a
@@ -219,20 +237,16 @@ const Home = () => {
   <img src="images/shape-11.svg" alt="Shape" className="of h m ba" />
 
   {/* Section Title Start */}
-  <div
-    x-data={{
-      sectionTitle: `Meet With Our Creative Dedicated Team`,
-      sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
-    }}
-  >
-    <div className="animate_top bb ze rj ki xn vq">
-      <h2
-        x-text="sectionTitle"
-        className="fk vj pr kk wm on/5 gq/2 bb _b"
-      ></h2>
-      <p className="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-    </div>
-  </div>
+  <div>
+          <div className="animate_top bb ze rj ki xn vq">
+            <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+              Meet With Our Dedicated Team
+            </h2>
+            <p className="bb on/5 wo/5 hq">
+              We are here to ensure your needs are met with precision and care.
+            </p>
+          </div>
+        </div>
   {/* Section Title End */}
 
   <div className="bb ze i va ki xn xq jb jo">
@@ -956,6 +970,58 @@ const Home = () => {
   </div>
 </section>
 {/* ===== CTA End ===== */}
+
+<button
+        className={`xc wf xf ie ld vg sr gh tr g sa ta _a ${scrollTop ? 'uc' : ''}`}
+        onClick={scrollToTop}
+      >
+        <svg className="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+        </svg>
+      </button>
+      {/* ====== Back To Top End ===== */}
+
+{/* Pricing Table Script */}
+<script>
+  {`
+    const setup = () => {
+      return {
+        isNavOpen: false,
+
+        billPlan: 'monthly',
+
+        plans: [
+          {
+            name: 'Starter',
+            price: {
+              monthly: 29,
+              annually: 29 * 12 - 199,
+            },
+            features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+          },
+          {
+            name: 'Growth Plan',
+            price: {
+              monthly: 59,
+              annually: 59 * 12 - 100,
+            },
+            features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+          },
+          {
+            name: 'Business',
+            price: {
+              monthly: 139,
+              annually: 139 * 12 - 100,
+            },
+            features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+          },
+        ],
+      };
+    };
+  `}
+</script>
+
+<script defer src="bundle.js"></script>
 
 
     </main>
