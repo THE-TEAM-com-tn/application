@@ -10,8 +10,8 @@ const Footer = () => {
           <div className="tc uf ap gg fp">
             <div className="animate_top zd/2 to/4">
               <a href="index.html">
-                <img src="images/logo-light.svg" alt="Logo" className="om" />
-                <img src="images/logo-dark.svg" alt="Logo" className="xc nm" />
+                <img src="images/the_team.png" alt="Logo" className="om" />
+                <img src="images/the_team_dark.png" alt="Logo" className="xc nm" />
               </a>
 
               <p className="lc fb">

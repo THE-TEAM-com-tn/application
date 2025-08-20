@@ -1,6 +1,9 @@
 import ScrollReveal from "scrollreveal";
 import { useState, useEffect } from 'react';
-
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Home = () => {
 
@@ -20,6 +23,16 @@ const [scrollTop, setScrollTop] = useState(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    new Swiper(".swiper.testimonial-01", {
+      modules: [Navigation],
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }, []);
 
 
   useEffect(() => {
@@ -99,7 +112,7 @@ const [scrollTop, setScrollTop] = useState(false);
             alt="shape"
             className="xc 2xl:ud-block h v w va"
           />
-          <img src="images/shape-04.svg" alt="shape" className="h q r" />
+          <img src="images/shape-04.png" alt="shape" className="h q r" />
           <img src="images/hero.png" alt="Woman" className="h q r ua" />
         </div>
 
@@ -376,39 +389,21 @@ const [scrollTop, setScrollTop] = useState(false);
           <div className="wc qf pn xo ng">
             {/* Service Item */}
             <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-04.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Crafted for Startups</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <img src="images/1.svg" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b">Strategic Studies</h4>
+              <p>We offer strategic studies and support, from maturity assessments to portfolio identification and strategic plan implementation, helping organizations turn vision into action.</p>
             </div>
 
             <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-05.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">High-quality Design</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <img src="images/3.svg" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b">Quality Management</h4>
+              <p>We provide organizational development support, including implementing quality management systems and assisting with certification, helping companies enhance their processes and achieve recognized standards.</p>
             </div>
 
             <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-06.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">All Essential Sections</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-07.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Speed Optimized</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-05.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Fully Customizable</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-06.svg" alt="Icon" />
-              <h4 className="ek zj kk wm nb _b">Regular Updates</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <img src="images/2.svg" alt="Icon" />
+              <h4 className="ek zj kk wm nb _b">Project Management</h4>
+              <p>We offer project management consulting, from maturity assessments to PMO setup, Agile/SAFe implementation, and tailored training and coaching to strengthen project delivery.</p>
             </div>
           </div>
         </div>
@@ -645,7 +640,33 @@ const [scrollTop, setScrollTop] = useState(false);
                     </div>
                   </div>
                 </div>
+                <div className="swiper-slide">
+                  <div className="i hh rm sg vk xm bi qj">
+                    {/* Border Shape */}
+                    <span className="rc je md/2 gh xg h q r"></span>
+                    <span className="rc je md/2 mh yg h q p"></span>
+
+                    <div className="tc sf rn tn un zf dp">
+                      <img className="bf" src="images/testimonial.png" alt="User" />
+                      <div>
+                        <img src="images/icon-quote.svg" alt="Quote" />
+                        <p className="ek ik xj _p kc fb">
+                          Lolololo dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula. Mauris consequat justo volutpat.
+                        </p>
+
+                        <div className="tc yf vf">
+                          <div>
+                            <span className="rc ek xj kk wm zb">Devid Smith</span>
+                            <span className="rc">Founter @democompany</span>
+                          </div>
+                          <img className="rk" src="images/brand-light-02.svg" alt="Brand" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
               {/* Navigation */}
               <div className="tc wf xf fg jb">
                 <div className="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">

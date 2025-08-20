@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header({ darkMode, setDarkMode }) {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [page, setPage] = useState("home"); // tu peux passer cette valeur en props
+  const [page, setPage] = useState("home"); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +24,8 @@ export default function Header({ darkMode, setDarkMode }) {
       <div className="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
         <div className="vd to/4 tc wf yf">
           <a href="index.html">
-            <img className="om" src="images/logo-light.svg" alt="Logo Light" />
-            <img className="xc nm" src="images/logo-dark.svg" alt="Logo Dark" />
+            <img className="om" src="images/the_team.png" alt="Logo Light" />
+            <img className="xc nm" src="images/the_team_dark.png" alt="Logo Dark" />
           </a>
 
           {/* Hamburger Toggle BTN */}
@@ -75,16 +76,20 @@ export default function Header({ darkMode, setDarkMode }) {
           <nav>
             <ul className="tc _o sf yo cg ep">
               <li>
-                <a
-                  href="index.html"
+                <Link to="/"
                   className={`xl ${page === "home" ? "mk" : ""}`}
                 >
                   Home
-                </a>
+                </Link>
               </li>
+             <li>
+               <Link to="/calendar" className="xl">
+                  Calendar
+                </Link>
+             </li>
               <li>
-                <a href="index.html#features" className="xl">
-                  Features
+                <a href="index.html#support" className="xl">
+                  Blog
                 </a>
               </li>
               <li className="c i">
@@ -98,7 +103,7 @@ export default function Header({ darkMode, setDarkMode }) {
                     setDropdown(!dropdown);
                   }}
                 >
-                  Pages
+                  Training
                   <svg
                     className={`th mm we fd pf ${dropdown ? "wh" : ""}`}
                     xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +120,7 @@ export default function Header({ darkMode, setDarkMode }) {
                       href="blog-grid.html"
                       className={`xl ${page === "blog-grid" ? "mk" : ""}`}
                     >
-                      Blog Grid
+                      Agility
                     </a>
                   </li>
                   <li>
@@ -123,7 +128,7 @@ export default function Header({ darkMode, setDarkMode }) {
                       href="blog-single.html"
                       className={`xl ${page === "blog-single" ? "mk" : ""}`}
                     >
-                      Blog Single
+                      Business Analysis
                     </a>
                   </li>
                   <li>
@@ -131,7 +136,7 @@ export default function Header({ darkMode, setDarkMode }) {
                       href="signin.html"
                       className={`xl ${page === "signin" ? "mk" : ""}`}
                     >
-                      Sign In
+                      Lean Management
                     </a>
                   </li>
                   <li>
@@ -139,7 +144,7 @@ export default function Header({ darkMode, setDarkMode }) {
                       href="signup.html"
                       className={`xl ${page === "signup" ? "mk" : ""}`}
                     >
-                      Sign Up
+                      Project Management
                     </a>
                   </li>
                   <li>
@@ -147,16 +152,60 @@ export default function Header({ darkMode, setDarkMode }) {
                       href="404.html"
                       className={`xl ${page === "404" ? "mk" : ""}`}
                     >
-                      404
+                      Process Management
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className={`xl ${page === "404" ? "mk" : ""}`}
+                    >
+                      Strategic Management
                     </a>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="index.html#support" className="xl">
+              <li className="c i">
+                <a
+                  href="#"
+                  className={`xl tc wf yf bg ${
+                    ["blog-grid", "blog-single", "signin", "signup", "404"].includes(page) ? "mk" : ""
+                  }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setDropdown(!dropdown);
+                  }}
+                >
                   Support
+                  <svg
+                    className={`th mm we fd pf ${dropdown ? "wh" : ""}`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                  </svg>
                 </a>
+
+                {/* Dropdown */}
+                <ul className={`a ${dropdown ? "tc" : ""}`}>
+                  <li>
+                     <Link to="/reclamation" className="xl">
+                       Complaint
+                     </Link>
+                    </li>
+                  <li>
+                     <Link to="/devis" className="xl">
+                       Tailored need
+                     </Link>
+                    </li>
+                    <li>
+                     <Link to="/review" className="xl">
+                       Review
+                     </Link>
+                    </li>
+                </ul>
               </li>
+            
             </ul>
           </nav>
 
@@ -164,11 +213,11 @@ export default function Header({ darkMode, setDarkMode }) {
             <div className={`pc h io pa ra ${navigationOpen ? "!-ud-visible" : "d"}`}>
               <label className="rc ab i">
                 <input
-  type="checkbox"
-  checked={darkMode}
-  onChange={() => setDarkMode(v => !v)}
-  className="pf vd yc uk h r za ab"
-/>
+                  type="checkbox"
+                  checked={darkMode}
+                  onChange={() => setDarkMode(v => !v)}
+                  className="pf vd yc uk h r za ab"
+                 />
 
                 {/* Icon Sun */}
                 <svg
