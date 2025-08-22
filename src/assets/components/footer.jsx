@@ -1,6 +1,10 @@
 import React from "react";
+import { useDarkMode } from "../../contexts/DarkModeContext";
+
 
 const Footer = () => {
+   const { darkMode, toggleDarkMode } = useDarkMode();
+
   
   return (
     <footer>
@@ -10,9 +14,20 @@ const Footer = () => {
           <div className="tc uf ap gg fp">
             <div className="animate_top zd/2 to/4">
               <a href="index.html">
-                <img src="images/the_team.png" alt="Logo" className="om" />
-                <img src="images/the_team_dark.png" alt="Logo" className="xc nm" />
-              </a>
+        {/* Logo light - visible seulement quand darkMode est false */}
+        <img 
+          className={`om ${darkMode ? 'hidden' : 'block'}`} 
+          src="images/the_team.png" 
+          alt="Logo Light" 
+        />
+        
+        {/* Logo dark - visible seulement quand darkMode est true */}
+        <img 
+          className={`xc nm ${darkMode ? 'block' : 'hidden'}`} 
+          src="images/the_team_dark.png" 
+          alt="Logo Dark" 
+        />
+      </a>
 
               <p className="lc fb">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

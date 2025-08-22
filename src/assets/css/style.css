@@ -34,6 +34,7 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+
 *,
 ::before,
 ::after {
@@ -1008,6 +1009,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
 .vd{
   width: 100%;
 }
+
+.dark .vd {
+   
+  background-color: rgb(19, 28, 39 / var(--tw-bg-opacity)); /* Nouvelle couleur dark mode */
+}
 .wd{
   width: 1.875rem;
 }
@@ -1322,6 +1328,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
   --tw-bg-opacity: 1;
   background-color: rgb(244 247 250 / var(--tw-bg-opacity));
 }
+.dark .fh {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 28 49 / var(--tw-bg-opacity)); 
+}
 .gh{
   --tw-bg-opacity: 1;
   background-color: #259d79;
@@ -1332,6 +1342,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
 .hh{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.dark .hh{
+  --tw-bg-opacity: 1;
+  background-color: #131c27;
 }
 .ih{
   --tw-bg-opacity: 1;
@@ -1367,6 +1381,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
 .qh{
   --tw-bg-opacity: 1;
   background-color: rgb(236 240 245 / var(--tw-bg-opacity));
+}
+.dark .qh {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 28 49 / var(--tw-bg-opacity)); /* Nouvelle couleur dark mode */
 }
 .rh{
   --tw-bg-opacity: 1;
@@ -1635,6 +1653,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
 .kk{
   --tw-text-opacity: 1;
   color: rgb(24 28 49 / var(--tw-text-opacity));
+}
+
+.dark .kk {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)); /* Blanc en dark mode */
 }
 .lk{
   --tw-text-opacity: 1;
@@ -2585,3 +2608,16 @@ h1,  h2,  h3,  h4,  h5,  h6{
   }
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+.dark body {
+  background-color: #131c27; 
+  
+}

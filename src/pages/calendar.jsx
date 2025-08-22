@@ -1,31 +1,29 @@
-import Header from "../assets/components/header.jsx";
-import Footer from "../assets/components/footer.jsx";
+
 import React, { useState } from "react";
 
 export default function Calendar() {
     const [loading, setLoading] = useState(false);
 return (
-    <main className="min-h-screen flex flex-col">
+    <main >
       
       
-      {/* Calendar Section - Empty for now */}
-      <section className="ji gp uq flex-grow">
-        <div className="bb ye ki xn vq jb jo">
-          {loading ? (
-            <p className="text-center text-gray-500 dark:text-gray-400">Loading calendar...</p>
-          ) : (
-            <div className="text-center py-20">
-              <h2 className="fk vj zp or kk wm wb mb-4 dark:text-white">
-                Calendar Page
-              </h2>
-              <p className="text-gray-600 dark:text-gray-300">
-                Calendar content will be displayed here
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
+     <section className="i pg rm ji gp uq">
+                {/* Bg Shapes */}
+                <img src="images/shape-06.svg" alt="Shape" className="h aa y" />
+                <img src="images/shape-03.svg" alt="Shape" className="h ca u" />
+                <img src="images/shape-07.svg" alt="Shape" className="h w da ee" />
+                <img src="images/shape-12.svg" alt="Shape" className="h p s" />
+                <img src="images/shape-13.svg" alt="Shape" className="h r q" />
 
+                {/* Section Title Start */}
+                <div>
+                    <div className="animate_top bb ze rj ki xn vq">
+                        <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
+                            Calendar Page
+                        </h2>
+                    </div>
+                </div>
+            </section>
       
     </main>
   );

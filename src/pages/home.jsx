@@ -243,7 +243,7 @@ const [scrollTop, setScrollTop] = useState(false);
       {/* ===== Team Start ===== */}
 <section className="i pg ji gp uq">
   {/* Bg Shapes */}
-  <span className="rc h s r vd fd/5 fh rm"></span>
+  <span className="rc h s r vd fd/5 fh rm "></span>
   <img src="images/shape-08.svg" alt="Shape Bg" className="h q r" />
   <img src="images/shape-09.svg" alt="Shape" className="of h y z/2" />
   <img src="images/shape-10.svg" alt="Shape" className="h _ aa" />
@@ -253,7 +253,7 @@ const [scrollTop, setScrollTop] = useState(false);
   <div>
           <div className="animate_top bb ze rj ki xn vq">
             <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-              Meet With Our Dedicated Team
+              Meet With Our Creative Dedicated Team
             </h2>
             <p className="bb on/5 wo/5 hq">
               We are here to ensure your needs are met with precision and care.
@@ -395,7 +395,7 @@ const [scrollTop, setScrollTop] = useState(false);
             </div>
 
             <div className="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/3.svg" alt="Icon" />
+              <img src="images/6.svg" alt="Icon" />
               <h4 className="ek zj kk wm nb _b">Quality Management</h4>
               <p>We provide organizational development support, including implementing quality management systems and assisting with certification, helping companies enhance their processes and achieve recognized standards.</p>
             </div>
@@ -929,24 +929,24 @@ const [scrollTop, setScrollTop] = useState(false);
       <div className="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
         <form action="https://formbold.com/s/unique_form_id" method="POST">
           <div className="tc sf yo ap zf ep qb">
-            <div className="vd to/2">
+            <div className=" to/2">
               <label className="rc ac" htmlFor="fullname">Full name</label>
               <input type="text" name="fullname" id="fullname" placeholder="Devid Wonder" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
 
-            <div className="vd to/2">
+            <div className=" to/2">
               <label className="rc ac" htmlFor="email">Email address</label>
               <input type="email" name="email" id="email" placeholder="example@gmail.com" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
           </div>
 
           <div className="tc sf yo ap zf ep qb">
-            <div className="vd to/2">
+            <div className=" to/2">
               <label className="rc ac" htmlFor="phone">Phone number</label>
               <input type="text" name="phone" id="phone" placeholder="+009 3342 3432" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
 
-            <div className="vd to/2">
+            <div className=" to/2">
               <label className="rc ac" htmlFor="subject">Subject</label>
               <input type="text" id="subject" placeholder="Type your subject" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
