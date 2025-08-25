@@ -24,7 +24,7 @@ const [scrollTop, setScrollTop] = useState(false);
   };
 
   useEffect(() => {
-    new Swiper(".swiper.testimonial-01", {
+    const swiper = new Swiper(".testimonial-01", {
       modules: [Navigation],
       loop: true,
       navigation: {
@@ -32,6 +32,10 @@ const [scrollTop, setScrollTop] = useState(false);
         prevEl: ".swiper-button-prev",
       },
     });
+
+    return () => {
+      if (swiper) swiper.destroy(); // cleanup
+    };
   }, []);
 
 
@@ -157,8 +161,8 @@ const [scrollTop, setScrollTop] = useState(false);
                 <img src="images/icon-01.svg" alt="Icon" />
               </div>
               <div>
-                <h4 className="ek yj go kk wm xb">24/7 Support</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <h4 className="ek yj go kk wm xb">Accountability</h4>
+                <p>Anticipate, respond with agility, and honor our commitments.</p>
               </div>
             </div>
 
@@ -168,8 +172,8 @@ const [scrollTop, setScrollTop] = useState(false);
                 <img src="images/icon-02.svg" alt="Icon" />
               </div>
               <div>
-                <h4 className="ek yj go kk wm xb">Take Ownership</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <h4 className="ek yj go kk wm xb">Openness & Passion</h4>
+                <p>Be curious, embrace diversity, and challenge ourselves to grow.</p>
               </div>
             </div>
 
@@ -179,8 +183,8 @@ const [scrollTop, setScrollTop] = useState(false);
                 <img src="images/icon-03.svg" alt="Icon" />
               </div>
               <div>
-                <h4 className="ek yj go kk wm xb">Team Work</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <h4 className="ek yj go kk wm xb">Leadership</h4>
+                <p>Inspire through teamwork and collaboration.</p>
               </div>
             </div>
           </div>
@@ -224,7 +228,7 @@ const [scrollTop, setScrollTop] = useState(false);
               </p>
 
               <a
-                href="https://www.youtube.com/watch?v=xcJtL7QggTI"
+                href="https://www.youtube.com/channel/UCBPlXrGX_sbk82XfwQAEc5w"
                 data-fslightbox
                 className="vc wf hg mb"
               >
@@ -267,7 +271,102 @@ const [scrollTop, setScrollTop] = useState(false);
       {/* Team Item */}
       <div className="animate_top rj">
         <div className="c i pg z-1">
-          <img className="vd" src="images/team-01.png" alt="Team" />
+          <img className="vd" src="images/safia.jpeg" alt="Team" />
+
+          <div className="ef im nl il">
+            <span className="h -ud-left-5 -ud-bottom-21 rc de gd gh if wa"></span>
+            <span className="h s p rc vd hd mh va"></span>
+            <div className="h s p vd ij jj xa">
+              <ul className="tc xf wf gg">
+                <li>
+                  <a href="https://www.facebook.com/safiazbidi">
+                    <svg
+                      className="uh vl ml il"
+                      width="10"
+                      height="18"
+                      viewBox="0 0 10 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.linkedin.com/in/safiya-zbidi/">
+                    <svg
+                      className="uh vl ml il"
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h4 className="yj go kk wm ob zb">Safiya ZBIDI</h4>
+        <p>CEO THE TEAM</p>
+      </div>
+
+      {/* Team Item */}
+      <div className="animate_top rj">
+        <div className="c i pg z-1">
+          <img className="vd" src="images/monia.png" alt="Team" />
+
+          <div className="ef im nl il">
+            <span className="h -ud-left-5 -ud-bottom-21 rc de gd gh if wa"></span>
+            <span className="h s p rc vd hd mh va"></span>
+            <div className="h s p vd ij jj xa">
+              <ul className="tc xf wf gg">
+                <li>
+                  <a href="https://www.facebook.com/monia.sahbanichelbi">
+                    <svg
+                      className="uh vl ml il"
+                      width="10"
+                      height="18"
+                      viewBox="0 0 10 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.linkedin.com/in/monia-sahbani/">
+                    <svg
+                      className="uh vl ml il"
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h4 className="yj go kk wm ob zb">Monia SAHBANI</h4>
+        <p>Directrice Département Formation et Certification</p>
+      </div>
+      {/* Team Item */}
+      {/*<div className="animate_top rj">
+        <div className="c i pg z-1">
+          <img className="vd" src="images/team-02.png" alt="Team" />
 
           <div className="ef im nl il">
             <span className="h -ud-left-5 -ud-bottom-21 rc de gd gh if wa"></span>
@@ -321,48 +420,56 @@ const [scrollTop, setScrollTop] = useState(false);
           </div>
         </div>
 
-        <h4 className="yj go kk wm ob zb">Olivia Andrium</h4>
-        <p>Product Manager</p>
-      </div>
+        <h4 className="yj go kk wm ob zb">Monia SAHBANI</h4>
+        <p>Directrice Département Formation et Certification</p>
+      </div> */}
 
       {/* Team Item */}
       <div className="animate_top rj">
         <div className="c i pg z-1">
-          <img className="vd" src="images/team-02.png" alt="Team" />
+          <img className="vd" src="images/imen.jpeg" alt="Team" />
 
           <div className="ef im nl il">
             <span className="h -ud-left-5 -ud-bottom-21 rc de gd gh if wa"></span>
             <span className="h s p rc vd hd mh va"></span>
             <div className="h s p vd ij jj xa">
               <ul className="tc xf wf gg">
-                {/* ... second team SVGs ... */}
+                <li>
+                  <a href="https://fr-fr.facebook.com/amouna.gharbi.714">
+                    <svg
+                      className="uh vl ml il"
+                      width="10"
+                      height="18"
+                      viewBox="0 0 10 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M6.66634 10.25H8.74968L9.58301 6.91669H6.66634V5.25002C6.66634 4.39169 6.66634 3.58335 8.33301 3.58335H9.58301V0.783354C9.31134 0.74752 8.28551 0.666687 7.20218 0.666687C4.93968 0.666687 3.33301 2.04752 3.33301 4.58335V6.91669H0.833008V10.25H3.33301V17.3334H6.66634V10.25Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="https://www.linkedin.com/in/imen-gharbi-/">
+                    <svg
+                      className="uh vl ml il"
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill="" />
+                    </svg>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-
-        <h4 className="yj go kk wm ob zb">Jemse Kemorun</h4>
-        <p>Product Designer</p>
-      </div>
-
-      {/* Team Item */}
-      <div className="animate_top rj">
-        <div className="c i pg z-1">
-          <img className="vd" src="images/team-03.png" alt="Team" />
-
-          <div className="ef im nl il">
-            <span className="h -ud-left-5 -ud-bottom-21 rc de gd gh if wa"></span>
-            <span className="h s p rc vd hd mh va"></span>
-            <div className="h s p vd ij jj xa">
-              <ul className="tc xf wf gg">
-                {/* ... third team SVGs ... */}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <h4 className="yj go kk wm ob zb">Avi Pestarica</h4>
-        <p>Web Designer</p>
+        <h4 className="yj go kk wm ob zb">Imen GHARBI</h4>
+        <p>Consultante en Management de Projet
+           Responsable Appel d’Offre</p>
       </div>
     </div>
   </div>
@@ -379,8 +486,7 @@ const [scrollTop, setScrollTop] = useState(false);
               We Offer The Best Quality Service for You
             </h2>
             <p className="bb on/5 wo/5 hq">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
-            </p>
+           Delivering excellence in every project</p>
           </div>
         </div>
         {/* Section Title End */}
@@ -602,7 +708,7 @@ const [scrollTop, setScrollTop] = useState(false);
               Client’s Testimonials
             </h2>
             <p className="bb on/5 wo/5 hq">
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
+              The impact through our clients’ words.
             </p>
           </div>
         </div>
@@ -622,19 +728,44 @@ const [scrollTop, setScrollTop] = useState(false);
                     <span className="rc je md/2 mh yg h q p"></span>
 
                     <div className="tc sf rn tn un zf dp">
-                      <img className="bf" src="images/testimonial.png" alt="User" />
+                      <img className="bf" src="images/images.jpeg" alt="User" />
                       <div>
                         <img src="images/icon-quote.svg" alt="Quote" />
                         <p className="ek ik xj _p kc fb">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula. Mauris consequat justo volutpat.
+                        I greatly appreciated the enthusiasm and energy of our coach, Mr. Ezzeddine Abbassi. His energy is contagious, and his passion for the topics presented is both inspiring and remarkable. Thank you, and wishing you continued success.                        </p>
+
+                        <div className="tc yf vf">
+                          <div>
+                            <span className="rc ek xj kk wm zb">Oussema MELLOULI</span>
+                            <span className="rc">Olympic Champion and World Champion in Swimming</span>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="swiper-slide">
+                  <div className="i hh rm sg vk xm bi qj">
+                    {/* Border Shape */}
+                    <span className="rc je md/2 gh xg h q r"></span>
+                    <span className="rc je md/2 mh yg h q p"></span>
+
+                    <div className="tc sf rn tn un zf dp">
+                      <img className="bf" src="images/sah.jpeg" alt="User" />
+                      <div>
+                        <img src="images/icon-quote.svg" alt="Quote" />
+                        <p className="ek ik xj _p kc fb">
+                        After months of consistent effort, working hard and trying to keep balance between work, studies and personal life. I’m Pmp certified now and feel so fortunate that I got above target score in all domains and obtaining this certification from Project Management Institut. My special thank to THE TEAM, Safiya ZBIDI, Meriem SKIK, Monia Sahbani, Abdelmalek Sfaxi and Imen Gharbi for his support. “…”
+                         ~ Anyone Who stops learning is old, Anyone Who keeps learning stay young ~
                         </p>
 
                         <div className="tc yf vf">
                           <div>
-                            <span className="rc ek xj kk wm zb">Devid Smith</span>
-                            <span className="rc">Founter @democompany</span>
+                            <span className="rc ek xj kk wm zb">Sahar JOMLI</span>
+                            <span className="rc">Project Manager Reengineering Business Process - ENDA TAMWEEL</span>
                           </div>
-                          <img className="rk" src="images/brand-light-02.svg" alt="Brand" />
                         </div>
                       </div>
                     </div>
@@ -647,39 +778,39 @@ const [scrollTop, setScrollTop] = useState(false);
                     <span className="rc je md/2 mh yg h q p"></span>
 
                     <div className="tc sf rn tn un zf dp">
-                      <img className="bf" src="images/testimonial.png" alt="User" />
+                      <img className="bf" src="images/#" alt="User" />
                       <div>
                         <img src="images/icon-quote.svg" alt="Quote" />
                         <p className="ek ik xj _p kc fb">
-                          Lolololo dolor sit amet, consectetur adipiscing elit. In dolor diam, feugiat quis enim sed, ullamcorper semper ligula. Mauris consequat justo volutpat.
+                         After hard work period I am finally PMP Certified. Special thanks to my family, my wife and daughters who never stopped supporting me, my colleagues « … » and my training classmates « … ». I can’t forget the continious support of Safiya ZBIDI CEO of a special training company The Team : Agile Management & Consulting. « … » Thank you all for giving me the energy and the positive vibes to realize this big carreer’s achievement.
                         </p>
-
                         <div className="tc yf vf">
                           <div>
-                            <span className="rc ek xj kk wm zb">Devid Smith</span>
-                            <span className="rc">Founter @democompany</span>
+                            <span className="rc ek xj kk wm zb">Melek FAkHFAKH</span>
+                            <span className="rc">Program Manager - SAFRAN</span>
                           </div>
-                          <img className="rk" src="images/brand-light-02.svg" alt="Brand" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+                   {/* Navigation */}
+                  <div className="flex justify-center gap-4 mt-6">
+                    <div className="swiper-button-prev static flex items-center justify-center w-8 h-8 border border-gray-300 rounded-full cursor-pointer">
+                     <svg className="w-3 h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z" />
+                     </svg>
+                    </div>
+                    <div className="swiper-button-next static flex items-center justify-center w-8 h-8 border border-gray-300 rounded-full cursor-pointer">
+                     <svg className="w-3 h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
+                     </svg>
+                   </div>
+                  </div>
               
-              {/* Navigation */}
-              <div className="tc wf xf fg jb">
-                <div className="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                  <svg className="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z" />
-                  </svg>
-                </div>
-                <div className="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                  <svg className="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
-                  </svg>
-                </div>
-              </div>
+
+
             </div>
           </div>
         </div>
@@ -722,11 +853,10 @@ const [scrollTop, setScrollTop] = useState(false);
         <div>
           <div className="animate_top bb ze rj ki xn vq">
             <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
-              Trusted by Global Brands
+              Our Partners & Clients
             </h2>
             <p className="bb on/5 wo/5 hq">
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
-            </p>
+            Trusted by leading organizations and innovators.</p>
           </div>
         </div>
         {/* Section Title End */}
@@ -734,29 +864,53 @@ const [scrollTop, setScrollTop] = useState(false);
         <div className="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
           <div className="wc rf qn zf cp kq xf wf">
             <a href="#" className="rc animate_top">
-              <img className="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-01.svg" alt="Clients" />
+              <img className="th wl ml il zl om" src="images/uni (1).svg" alt="Clients" />
+              
             </a>
             <a href="#" className="rc animate_top">
-              <img className="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-02.svg" alt="Clients" />
+              <img className="tk ml il zl om" src="images/uni (5).png" alt="Clients" />
+              
             </a>
             <a href="#" className="rc animate_top">
-              <img className="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-03.svg" alt="Clients" />
+              <img className="tk ml il zl om" src="images/uni (1).png" alt="Clients" />
+              
             </a>
             <a href="#" className="rc animate_top">
-              <img className="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-04.svg" alt="Clients" />
+              <img className="tk ml il zl om" src="images/uni (2).png" alt="Clients" />
+              
             </a>
             <a href="#" className="rc animate_top">
-              <img className="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-05.svg" alt="Clients" />
+              <img className="tk ml il zl om" src="images/uni (3).png" alt="Clients" />
+             
             </a>
             <a href="#" className="rc animate_top">
-              <img className="tk ml il zl om" src="images/brand-light-06.svg" alt="Clients" />
-              <img className="xc sk ml il zl nm" src="images/brand-dark-06.svg" alt="Clients" />
+              <img className="tk ml il zl om" src="images/uni (4).png" alt="Clients" />
+              
+               </a>
+            <a href="#" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/sts.svg" alt="Clients" />
+
+               </a>
+            <a href="#" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/(6).png" alt="Clients" />
+
+               </a>
+            <a href="#" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/(0).png" alt="Clients" />
+
+               </a>
+            <a href="#" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/(8).svg.png" alt="Clients" />
+
+               </a>
+            <a href="#" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/(9).svg.png" alt="Clients" />
+
+               </a>
+            <a href="https://www.sofrecom.com/" className="rc animate_top">
+              <img className="tk ml il zl om" src="images/(10).png" alt="Clients" />
             </a>
+            
           </div>
         </div>
       </section>
@@ -872,8 +1026,7 @@ const [scrollTop, setScrollTop] = useState(false);
     <div className="animate_top bb ze rj ki xn vq">
       <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">Let’s Stay Connected</h2>
       <p className="bb on/5 wo/5 hq">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.
-      </p>
+       Connect with us for updates and opportunities.</p>
     </div>
   </div>
   {/* Section Title End */}
@@ -887,20 +1040,17 @@ const [scrollTop, setScrollTop] = useState(false);
 
         <div className="fb">
           <h4 className="wj kk wm cc">Email Address</h4>
-          <p><a href="#">support@startup.com</a></p>
+          <p><a href="#">contact@theteam.com.tn</a></p>
         </div>
         <div className="fb">
           <h4 className="wj kk wm cc">Office Location</h4>
-          <p>76/A, Green valle, Califonia USA.</p>
+          <p>Impasse1, 14 RUE TAHAR SFAR, 2092 El MANAR II – TUNISIA</p>
         </div>
         <div className="fb">
           <h4 className="wj kk wm cc">Phone Number</h4>
-          <p><a href="#">+009 8754 3433 223</a></p>
+          <p><a href="#">+ 216 31 172 672</a></p>
         </div>
-        <div className="fb">
-          <h4 className="wj kk wm cc">Skype Email</h4>
-          <p><a href="#">example@yourmail.com</a></p>
-        </div>
+      
 
         <span className="rc nd rh tm lc fb"></span>
 
@@ -908,17 +1058,23 @@ const [scrollTop, setScrollTop] = useState(false);
           <h4 className="wj kk wm qb">Social Media</h4>
           <ul className="tc wf fg">
             <li>
-              <a href="#" className="c tc wf xf ie ld rg ml il tl">
+              <a href="https://www.facebook.com/TheteamTN" className="c tc wf xf ie ld rg ml il tl">
                 <svg className="th lm ml il" width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.83366 11.3752H9.12533L10.042 7.7085H6.83366V5.87516C6.83366 4.931 6.83366 4.04183 8.667 4.04183H10.042V0.96183C9.74316 0.922413 8.61475 0.833496 7.42308 0.833496C4.93433 0.833496 3.16699 2.35241 3.16699 5.14183V7.7085H0.416992V11.3752H3.16699V19.1668H6.83366V11.3752Z" fill="" />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#" className="c tc wf xf ie ld rg ml il tl">
-                <svg className="th lm ml il" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.3153 2.18484C18.6155 2.4944 17.8733 2.6977 17.1134 2.78801C17.9144 2.30899 18.5138 1.55511 18.8001 0.666844C18.0484 1.11418 17.2244 1.42768 16.3654 1.59726C15.7885 0.979958 15.0238 0.57056 14.1901 0.432713C13.3565 0.294866 12.5007 0.436294 11.7558 0.835009C11.0108 1.23372 10.4185 1.86739 10.0708 2.63749C9.72313 3.40759 9.63963 4.27098 9.83327 5.09343C8.30896 5.01703 6.81775 4.62091 5.45645 3.93079C4.09516 3.24067 2.89423 2.27197 1.93161 1.08759C1.59088 1.67284 1.41182 2.33814 1.41278 3.01534C1.41278 4.34451 2.08928 5.51876 3.11778 6.20626C2.50912 6.1871 1.91386 6.02273 1.38161 5.72685V5.77451C1.38179 6.65974 1.68811 7.51766 2.24864 8.20282C2.80916 8.88797 3.58938 9.3582 4.45703 9.53376C3.89201 9.68688 3.29956 9.70945 2.72453 9.59976C2.96915 10.3617 3.44595 11.0281 4.08815 11.5056C4.73035 11.9831 5.50581 12.2478 6.30594 12.2627C5.51072 12.8872 4.60019 13.3489 3.62642 13.6213C2.65264 13.8938 1.63473 13.9716 0.630859 13.8503C2.38325 14.9773 4.4232 15.5756 6.50669 15.5737C13.5586 15.5737 17.415 9.73176 17.415 4.66535C17.415 4.50035 17.4104 4.33351 17.4031 4.17035C18.1537 3.62783 18.8016 2.95578 19.3162 2.18576L19.3153 2.18484Z" fill="" />
-                </svg>
+              <a href="https://www.instagram.com/the_team_tn/" className="c tc wf xf ie ld rg ml il tl">
+                <img src="images/insta.png"  />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/the-team-tunisie/" className="c tc wf xf ie ld rg ml il tl">
+                <svg className="th lm ml il" width="20" height="16" viewBox="0 0 20 16" fill="none"xmlns="http://www.w3.org/2000/svg"
+                    >
+                  <path d="M3.78353 2.16665C3.78331 2.60867 3.6075 3.03251 3.29478 3.34491C2.98207 3.65732 2.55806 3.8327 2.11603 3.83248C1.674 3.83226 1.25017 3.65645 0.937761 3.34373C0.625357 3.03102 0.449975 2.60701 0.450196 2.16498C0.450417 1.72295 0.626223 1.29912 0.93894 0.986712C1.25166 0.674307 1.67567 0.498925 2.1177 0.499146C2.55972 0.499367 2.98356 0.675173 3.29596 0.98789C3.60837 1.30061 3.78375 1.72462 3.78353 2.16665V2.16665ZM3.83353 5.06665H0.500195V15.5H3.83353V5.06665ZM9.1002 5.06665H5.78353V15.5H9.06686V10.025C9.06686 6.97498 13.0419 6.69165 13.0419 10.025V15.5H16.3335V8.89165C16.3335 3.74998 10.4502 3.94165 9.06686 6.46665L9.1002 5.06665V5.06665Z" fill="" />
+                        </svg>
               </a>
             </li>
             {/* Other social icons omitted for brevity */}
@@ -931,19 +1087,19 @@ const [scrollTop, setScrollTop] = useState(false);
           <div className="tc sf yo ap zf ep qb">
             <div className=" to/2">
               <label className="rc ac" htmlFor="fullname">Full name</label>
-              <input type="text" name="fullname" id="fullname" placeholder="Devid Wonder" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+              <input type="text" name="fullname" id="fullname" placeholder="Safiya Zbidi" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
 
             <div className=" to/2">
               <label className="rc ac" htmlFor="email">Email address</label>
-              <input type="email" name="email" id="email" placeholder="example@gmail.com" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+              <input type="email" name="email" id="email" placeholder="thteam@gmail.com" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
           </div>
 
           <div className="tc sf yo ap zf ep qb">
             <div className=" to/2">
               <label className="rc ac" htmlFor="phone">Phone number</label>
-              <input type="text" name="phone" id="phone" placeholder="+009 3342 3432" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+              <input type="text" name="phone" id="phone" placeholder="+216 92 600 991" className="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
             </div>
 
             <div className=" to/2">

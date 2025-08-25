@@ -30,8 +30,7 @@ const Footer = () => {
       </a>
 
               <p className="lc fb">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              The Tunisian Establishment for Agile Management</p>
 
               <ul className="tc wf cg">
                 <li>

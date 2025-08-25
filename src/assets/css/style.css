@@ -1367,6 +1367,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
   --tw-bg-opacity: 1;
   background-color: #F5BABB;
 }
+.dark .mh{
+  --tw-bg-opacity: 1;
+  background-color: #F5BABB;
+}
 .nh{
   --tw-bg-opacity: 1;
   background-color: #259d79;
@@ -2621,3 +2625,30 @@ body {
   background-color: #131c27; 
   
 }
+
+
+/* Dark mode */
+.dropdown-dark {
+  background: #131c27;
+
+}
+
+.nav-links {
+  margin-left: -60px;  /* move left */
+  
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .nav-links {
+    margin-left: 0; /* reset for tablets */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .nav-links {
+    margin-left: 0; /* keep reset for small screens too */
+  }
+}
+

@@ -87,7 +87,7 @@ export default function Header() {
           }`}
         >
           <nav>
-            <ul className="tc _o sf yo cg ep">
+            <ul className="tc _o sf yo cg ep nav-links">
               <li>
                 <Link to="/"
                   className={`xl ${page === "home" ? "mk" : ""}`}
@@ -127,7 +127,7 @@ export default function Header() {
                 </a>
 
                 {/* Dropdown */}
-                <ul className={`a ${dropdown ? "tc" : ""}`}>
+                <ul className={`a ${dropdown ? "tc" : ""} ${darkMode ? "dropdown-dark" : "dropdown-light"}`}>
                   <li>
                     <a
                       href="blog-grid.html"
@@ -200,7 +200,7 @@ export default function Header() {
                 </a>
 
                 {/* Dropdown */}
-                <ul className={`a ${dropdown ? "tc" : ""}`}>
+                <ul className={`a ${dropdown ? "tc" : ""} ${darkMode ? "dropdown-dark" : "dropdown-light"}`}>
                   <li>
                      <Link to="/reclamation" className="xl">
                        Complaint
