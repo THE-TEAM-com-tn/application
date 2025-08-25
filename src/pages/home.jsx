@@ -778,7 +778,7 @@ const [scrollTop, setScrollTop] = useState(false);
                     <span className="rc je md/2 mh yg h q p"></span>
 
                     <div className="tc sf rn tn un zf dp">
-                      <img className="bf" src="images/#" alt="User" />
+                      <img className="bf" src="images/melek.jpeg" alt="User" />
                       <div>
                         <img src="images/icon-quote.svg" alt="Quote" />
                         <p className="ek ik xj _p kc fb">

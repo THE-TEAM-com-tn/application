@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../contexts/DarkModeContext";
+
+
 export default function Header() {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -109,7 +111,7 @@ export default function Header() {
                 <a
                   href="#"
                   className={`xl tc wf yf bg ${
-                    ["blog-grid", "blog-single", "signin", "signup", "404"].includes(page) ? "mk" : ""
+                    [].includes(page) ? "mk" : ""
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -130,40 +132,40 @@ export default function Header() {
                 <ul className={`a ${dropdown ? "tc" : ""} ${darkMode ? "dropdown-dark" : "dropdown-light"}`}>
                   <li>
                     <a
-                      href="blog-grid.html"
-                      className={`xl ${page === "blog-grid" ? "mk" : ""}`}
+                      href="#"
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Agility
                     </a>
                   </li>
                   <li>
                     <a
-                      href="blog-single.html"
-                      className={`xl ${page === "blog-single" ? "mk" : ""}`}
+                      href="#"
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Business Analysis
                     </a>
                   </li>
                   <li>
                     <a
-                      href="signin.html"
-                      className={`xl ${page === "signin" ? "mk" : ""}`}
+                      href="#"
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Lean Management
                     </a>
                   </li>
                   <li>
                     <a
-                      href="signup.html"
-                      className={`xl ${page === "signup" ? "mk" : ""}`}
+                      href="#"
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Project Management
                     </a>
                   </li>
                   <li>
                     <a
-                      href="404.html"
-                      className={`xl ${page === "404" ? "mk" : ""}`}
+                      href="#"
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Process Management
                     </a>
@@ -171,7 +173,7 @@ export default function Header() {
                   <li>
                     <a
                       href="#"
-                      className={`xl ${page === "404" ? "mk" : ""}`}
+                      className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Strategic Management
                     </a>
@@ -182,7 +184,7 @@ export default function Header() {
                 <a
                   href="#"
                   className={`xl tc wf yf bg ${
-                    ["blog-grid", "blog-single", "signin", "signup", "404"].includes(page) ? "mk" : ""
+                    [].includes(page) ? "mk" : ""
                   }`}
                   onClick={(e) => {
                     e.preventDefault();

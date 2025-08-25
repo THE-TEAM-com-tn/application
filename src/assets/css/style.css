@@ -2650,5 +2650,15 @@ body {
   .nav-links {
     margin-left: 0; /* keep reset for small screens too */
   }
+
 }
 
+.input-error {
+  border: 1px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
