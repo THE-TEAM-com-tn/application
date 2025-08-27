@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './assets/components/header.jsx';
@@ -14,10 +15,10 @@ import TrainingSingle from './pages/trainingSingle.jsx';
 import FormPage from './pages/formPage.jsx';
  */}
 function App() {
-  
+
   return (
     <Router>
-      <Header  />
+      <Header/>
       
       <Routes>
          <Route path="/" element={<Home />} />
@@ -33,7 +34,7 @@ function App() {
         <Route path="/review" element={<Review />} /> */}
       </Routes>
       
-      <Footer />
+      <Footer/>
     </Router>
   );
 }
