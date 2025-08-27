@@ -17,26 +17,9 @@ export default function Trainings() {
 
   // Animate on scroll
   useEffect(() => {
-    ScrollReveal().reveal(".animate_top", {
-      duration: 1200,
-      origin: "top",
-      distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
-    ScrollReveal().reveal(".animate_bottom", {
-      duration: 1200,
-      origin: "bottom",
-      distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
-    ScrollReveal().reveal(".animate_zoom", {
-      duration: 1200,
-      scale: 0.85,
-      easing: "ease",
-      reset: false,
-    });
+    ScrollReveal().reveal(".animate_top", {duration: 1200,origin: "top",distance: "50px",easing: "ease",reset: false,});
+    ScrollReveal().reveal(".animate_bottom", {duration: 1200,origin: "bottom",distance: "50px",easing: "ease",reset: false,});
+    ScrollReveal().reveal(".animate_zoom", {duration: 1200,scale: 0.85,easing: "ease",reset: false,});
   }, []);
 
   // Read URL params once on mount
@@ -133,14 +116,18 @@ export default function Trainings() {
               <div key={t.id} className="animate_top sg vk rm xm">
                 <div className="c rc i z-1 pg">
                   <img
-                    className="w-full"
-                    src={
-                      t.featured_image_url
-                        ? `http://127.0.0.1:8000/storage/${t.image}`
-                        : "images/blog-placeholder.png"
-                    }
-                    alt={t.name}
-                  />
+  className="w-full"
+  src={
+    t.featured_image_url
+      ? t.featured_image_url.replace("/files/", "/storage/files/")
+      : "images/blog-placeholder.png"
+  }
+  alt={t.name}
+/>
+
+
+
+
                   <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
                     <Link
                       to={`/trainings/${t.id}`}
@@ -183,24 +170,6 @@ export default function Trainings() {
           )}
         </div>
 
-        {/* Pagination */}
-        <footer className="pagination mt-8 animate_top">
-          <button
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
-            disabled={page <= 1}
-          >
-            Prev
-          </button>
-          <span>
-            Page {page} of {totalPages}
-          </span>
-          <button
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-            disabled={page >= totalPages}
-          >
-            Next
-          </button>
-        </footer>
       </section>
     </main>
   );
