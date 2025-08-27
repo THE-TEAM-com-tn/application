@@ -2,13 +2,38 @@
 
 
 
-## Hosted App - Server Config :
+## I - Hosted App - Server Config 
 
 <img src="https://i.imgur.com/sYclkFq.png" alt="Hosted App - Server Config" width="600"/>
 
 <br/>
 
 https://stackoverflow.com/a/79292109/10216101
+
+Adding This under the httpdocs in the public folder of your React project should work for you:
+
+
+File name `.httaccess`
+
+```
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+```
+
+
+<br/>
+<br/>
+
+---
+
+<br/>
+
+## II - Other 
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
