@@ -70,6 +70,7 @@ return (
                 <img src="images/shape-07.svg" alt="Shape" className="h w da ee" />
                 <img src="images/shape-12.svg" alt="Shape" className="h p s" />
                 <img src="images/shape-13.svg" alt="Shape" className="h r q" />
+                <img src="images/circle55.svg" alt="Shape" className="h r q" />
 
                 {/* Section Title Start */}
                 <div>

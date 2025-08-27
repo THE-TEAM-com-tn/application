@@ -46,6 +46,7 @@ export default function Blog() {
   return (
     <main>
       <section className="ji gp uq">
+        <img src="images/circle55.svg" alt="Shape" className="h r q" />
         {/* Section Title */}
         <div className="animate_top bb ze rj ki xn vq">
           <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">
@@ -58,7 +59,7 @@ export default function Blog() {
           <div className="wc qf pn xo zf iq">
             {blogs.length > 0 ? (
               blogs.map((blog) => (
-                <div key={blog.id} className="animate_top sg vk rm xm">
+                <div key={blog.id} className="animate_top sg vk rm xm training-card">
                   <div className="c rc i z-1 pg">
                     <img
                       className="w-full"
