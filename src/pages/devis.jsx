@@ -4,55 +4,13 @@ import ScrollReveal from "scrollreveal";
 export default function Devis() {
 
   useEffect(() => {
-   // Animate Left
-    ScrollReveal().reveal(".animate_left", {
-      duration: 2000,
-      origin: "left",
-      distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
-
-    // Animate Right
-    ScrollReveal().reveal(".animate_right", {
-      duration: 2000,
-      origin: "right",
-      distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
+  
 
     // Animate Top
     ScrollReveal().reveal(".animate_top", {
       duration: 2000,
       origin: "top",
       distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
-
-    // Animate Bottom
-    ScrollReveal().reveal(".animate_bottom", {
-      duration: 2000,
-      origin: "bottom",
-      distance: "50px",
-      easing: "ease",
-      reset: false,
-    });
-
-    // Fade In (sans mouvement, juste opacité)
-    ScrollReveal().reveal(".animate_fade", {
-      duration: 2000,
-      opacity: 0,
-      distance: "0px",
-      easing: "ease",
-      reset: false,
-    });
-
-    // Zoom In
-    ScrollReveal().reveal(".animate_zoom", {
-      duration: 2000,
-      scale: 0.85,
       easing: "ease",
       reset: false,
     });
