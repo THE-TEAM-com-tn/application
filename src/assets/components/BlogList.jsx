@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function BlogList({ limit }) {
@@ -8,7 +9,8 @@ export default function BlogList({ limit }) {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get("http://127.0.0.1:8000/api/blog-posts");
-        let data = response.data.data || [];
+        let data = response.data?.data || response.data || [];
+
         if (limit) data = data.slice(0, limit); // show only latest x blogs
         setBlogs(data);
       } catch (error) {
@@ -35,9 +37,12 @@ export default function BlogList({ limit }) {
                 alt={blog.title}
               />
               <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                <a href={`/blog/${blog.slug}`} className="vc ek rg lk gh sl ml il gi hi">
+                <Link
+                  to={`/blogs/${blog.slug}`}
+                  className="vc ek rg lk gh sl ml il gi hi"
+                >
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
             <div className="yh">
@@ -52,7 +57,7 @@ export default function BlogList({ limit }) {
                 </div>
               </div>
               <h4 className="ek tj ml il kk wm xl eq lb">
-                <a href={`/blog/${blog.slug}`}>{blog.title}</a>
+                <Link to={`/blogs/${blog.slug}`}>{blog.title}</Link>
               </h4>
             </div>
           </div>

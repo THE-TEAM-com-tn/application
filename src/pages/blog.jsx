@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import axios from "axios";
+import { Link } from "react-router-dom"; // ✅ important
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -27,7 +28,6 @@ export default function Blog() {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get("http://127.0.0.1:8000/api/blog-posts");
-        // Paginated data is in response.data.data
         setBlogs(response.data.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -60,22 +60,22 @@ export default function Blog() {
               blogs.map((blog) => (
                 <div key={blog.id} className="animate_top sg vk rm xm">
                   <div className="c rc i z-1 pg">
-<img
-  className="w-full"
-  src={
-    blog.image
-      ? `http://127.0.0.1:8000/storage/${blog.image}`
-      : "images/blog-placeholder.png"
-  }
-  alt={blog.title}
-/>
+                    <img
+                      className="w-full"
+                      src={
+                        blog.image
+                          ? `http://127.0.0.1:8000/storage/${blog.image}`
+                          : "images/blog-placeholder.png"
+                      }
+                      alt={blog.title}
+                    />
                     <div className="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
-                      <a
-                        href={`/blog/${blog.slug}`}
+                      <Link
+                        to={`/blogs/${blog.slug}`} // ✅ utiliser Link
                         className="vc ek rg lk gh sl ml il gi hi"
                       >
                         Read More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="yh">
@@ -90,7 +90,7 @@ export default function Blog() {
                       </div>
                     </div>
                     <h4 className="ek tj ml il kk wm xl eq lb">
-                      <a href={`/blog/${blog.slug}`}>{blog.title}</a>
+                      <Link to={`/blogs/${blog.slug}`}>{blog.title}</Link> {/* ✅ aussi ici */}
                     </h4>
                   </div>
                 </div>

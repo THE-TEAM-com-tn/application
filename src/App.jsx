@@ -8,11 +8,10 @@ import Reclamation from './pages/reclamation.jsx';
 import Devis from './pages/devis.jsx';
 import Review from './pages/review.jsx';
 import Blog from './pages/blog.jsx';
-{/*import BlogSingle from './pages/blogSingle.jsx';
-import Training from './pages/training.jsx';
-import TrainingSingle from './pages/trainingSingle.jsx';
-import FormPage from './pages/formPage.jsx';
- */}
+import BlogSingle from './pages/blogSingle.jsx';
+import Trainings from './pages/training.jsx';
+
+
 function App() {
   
   return (
@@ -26,11 +25,9 @@ function App() {
          <Route path="/devis" element={<Devis />} />
          <Route path="/review" element={<Review />} />
         <Route path="/blog" element={<Blog />} />
-        {/*<Route path="/blogs/:slug" element={<BlogSingle />} />
-        <Route path="/trainings" element={<Training />} />
-        <Route path="/trainings/:slug" element={<TrainingSingle />} />
-        <Route path="/forms" element={<FormPage />} />
-        <Route path="/review" element={<Review />} /> */}
+        <Route path="/blogs/:slug" element={<BlogSingle />} />
+        <Route path="/trainings" element={<Trainings />} />
+
       </Routes>
       
       <Footer />

@@ -132,7 +132,7 @@ export default function Header() {
                 <ul className={`a ${dropdown ? "tc" : ""} ${darkMode ? "dropdown-dark" : "dropdown-light"}`}>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Agility"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Agility
@@ -140,7 +140,7 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Business%20Analysis"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Business Analysis
@@ -148,7 +148,7 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Lean%20Management"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Lean Management
@@ -156,7 +156,7 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Project%20Management"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Project Management
@@ -164,7 +164,7 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Process%20Management"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Process Management
@@ -172,10 +172,18 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/trainings?category=Strategic%20Management"
                       className={`xl ${page === "" ? "mk" : ""}`}
                     >
                       Strategic Management
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/trainings?category=Information%20Systems"
+                      className={`xl ${page === "" ? "mk" : ""}`}
+                    >
+                      Information Systems
                     </a>
                   </li>
                 </ul>

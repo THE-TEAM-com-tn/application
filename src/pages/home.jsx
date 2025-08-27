@@ -923,7 +923,7 @@ const [scrollTop, setScrollTop] = useState(false);
         <div className="animate_top bb ze rj ki xn vq">
           <h2 className="fk vj pr kk wm on/5 gq/2 bb _b">Latest Blogs & News</h2>
           <p className="bb on/5 wo/5 hq">
-            Discover insights, tips, and stories from our community.
+            
           </p>
         </div>
 
