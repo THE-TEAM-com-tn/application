@@ -6,6 +6,10 @@
 
 <img src="https://i.imgur.com/sYclkFq.png" alt="Hosted App - Server Config" width="600"/>
 
+<br/>
+
+https://stackoverflow.com/a/79292109/10216101
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
